@@ -1,0 +1,26 @@
+<template name="indexWrapper1">
+<block wx:if="{{navTo==2}}">
+	<view>{{}}</view>
+	<view class="wrapper-content">
+    <block wx:for="{{tagArr}}" wx:for-index="index" wx:for-item="item">  
+    	<block wx:if="{{index==1}}">
+		    <view class="tags-box">
+		       <text class="ibox-title">{{item.title}}</text>
+		       <view class="list-container">
+				     <view class="list-ui">  
+				        <block wx:for="{{item.tags}}" wx:for-index="index1" wx:for-item="item1">
+				        <navigator class="tags-nav"  url="../list/list?tag={{item1}}">
+				            <text class="tag">{{item1}}</text>
+				        </navigator>
+				        </block>
+			        </view>
+		  			</view>
+		    </view>
+		  </block>
+		  <block wx:else>
+
+		  </block>
+    </block>
+  </view>
+</block>
+</template>

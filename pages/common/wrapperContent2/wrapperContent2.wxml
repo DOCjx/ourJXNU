@@ -1,0 +1,7 @@
+<template name="indexWrapper2">
+<block wx:if="{{navTo==3}}">
+  <view class="wrapper-content">
+    2
+  </view>
+</block>
+</template>
