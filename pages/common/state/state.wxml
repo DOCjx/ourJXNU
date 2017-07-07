@@ -1,0 +1,5 @@
+<template name="state">
+	<view class="wrapper-content">
+    你是第一个发贴的呀！
+  </view>
+</template>

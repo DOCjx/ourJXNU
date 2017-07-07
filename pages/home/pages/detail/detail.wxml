@@ -1,0 +1,150 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+    <scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100">
+        <view class="userInfo">
+            <image src="{{bookInfo.author.pic}}" background-size="cover" class="news-image"/>
+            <view class="left-right">
+              <view class="top"> {{bookInfo.author.name}}</view>
+              <view class="down"> 2小时前</view>
+            </view>
+        </view>
+        <view class="detail">
+            <view class="detail-con">
+                <view class="detail-summary">{{bookInfo.summary}}</view>
+                <view wx:if="{{bookInfo.image}}" class="newsbookInfoConImg">
+                    <image mode="aspectFill" data-imgUrl="{{bookInfo.image}}" bindtap="previewImg" mode="aspectFill" src="{{bookInfo.image}}"/>
+                </view>
+            </view>
+            <view class="detail-foo">
+                <view class="detail-fooL"> 
+                    <image style="width:18px;height:18px" src="../../resources/worth.png"/>
+                    <text>{{bookInfo.price[0]+bookInfo.price[1]}}</text>
+                </view>
+                <view class="detail-fooM">
+                    <image style="width:18px;height:18px" src="../../resources/wechat.png"/>
+                    <text>{{bookInfo.pages[0]+bookInfo.pages[1]+bookInfo.pages[2]}}</text>
+                </view>
+                <view class="detail-fooR">
+                    <block wx:if="{{bookInfo.markers[0]}}">
+                      <navigator url="../map/map?latitude={{bookInfo.markers[0].latitude}}&longitude={{bookInfo.markers[0].longitude}}&name={{bookInfo.markers[0].name}}">
+                        <image style="width:32px;height:32px" src="../../resources/location.png"/>
+                      </navigator>
+                    </block>
+                    <block wx:else>
+                        <image style="width:32px;height:32px" src="../../resources/location_h.png"/>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="detail-note">
+            <view class="detail-note-head">最热评论</view>
+            <block wx:for="{{bookInfo.tags}}">
+                <view wx:if="{{index < 3}}" class="detail-note-hot">
+                    <view class="detail-note-CL">
+                        <image src="{{item.pic}}" background-size="cover" class="comment-user-icon"/>
+                    </view>
+                    <view class="detail-note-CR">
+                        <view class="detail-note-RT">
+                            <view  class="detail-note-RTL">
+                                {{item.name}}
+                            </view>
+                            <view  class="detail-note-RTR">
+                                {{item.count}}
+                                <image id="{{item.name}}" bindtap="favTap" src="../../resources/{{item.fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                            </view>
+                        </view>
+                        <view class="detail-note-RB">
+                            {{item.title}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <view class="detail-note-head">最新评论</view>
+            <block wx:for="{{bookInfo.tags}}">
+                <view wx:if="{{index == 5}}" class="detail-note-update">
+                    <view class="detail-note-CL">
+                        <image src="{{bookInfo.tags[2].pic}}" background-size="cover" class="comment-user-icon"/>
+                    </view>
+                    <view class="detail-note-CR">
+                        <view class="detail-note-RT">
+                            <view  class="detail-note-RTL">
+                                {{bookInfo.tags[2].name}}
+                            </view>
+                            <view  class="detail-note-RTR">
+                                {{bookInfo.tags[2].count}}
+                                <image id="{{bookInfo.tags[2].name}}" bindtap="favTap" src="../../resources/{{bookInfo.tags[2].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                            </view>
+                        </view>
+                        <view class="detail-note-RB">
+                            {{bookInfo.tags[2].title}}
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{index == 4}}" class="detail-note-update">
+                    <view class="detail-note-CL">
+                        <image src="{{bookInfo.tags[0].pic}}" background-size="cover" class="comment-user-icon"/>
+                    </view>
+                    <view class="detail-note-CR">
+                        <view class="detail-note-RT">
+                            <view  class="detail-note-RTL">
+                                {{bookInfo.tags[0].name}}
+                            </view>
+                            <view  class="detail-note-RTR">
+                                {{bookInfo.tags[0].count}}
+                                <image id="{{bookInfo.tags[0].name}}" bindtap="favTap" src="../../resources/{{bookInfo.tags[0].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                            </view>
+                        </view>
+                        <view class="detail-note-RB">
+                            {{bookInfo.tags[0].title}}
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{index == 4}}" class="detail-note-update">
+                    <view class="detail-note-CL">
+                        <image src="{{bookInfo.tags[1].pic}}" background-size="cover" class="comment-user-icon"/>
+                    </view>
+                    <view class="detail-note-CR">
+                        <view class="detail-note-RT">
+                            <view  class="detail-note-RTL">
+                                {{bookInfo.tags[1].name}}
+                            </view>
+                            <view  class="detail-note-RTR">
+                                {{bookInfo.tags[1].count}}
+                                <image id="{{bookInfo.tags[1].name}}" bindtap="favTap" src="../../resources/{{bookInfo.tags[1].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                            </view>
+                        </view>
+                        <view class="detail-note-RB">
+                            {{bookInfo.tags[1].title}}
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{index >= 3}}" class="detail-note-update">
+                    <view class="detail-note-CL">
+                        <image src="{{item.pic}}" background-size="cover" class="comment-user-icon"/>
+                    </view>
+                    <view class="detail-note-CR">
+                        <view class="detail-note-RT">
+                            <view  class="detail-note-RTL">
+                                {{item.name}}
+                            </view>
+                            <view  class="detail-note-RTR">
+                                {{item.count}}
+                                <image id="{{item.name}}" bindtap="favTap" src="../../resources/{{item.fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                            </view>
+                        </view>
+                        <view class="detail-note-RB">
+                            {{item.title}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="comment-box">
+        <view class="comment-co">
+            <textarea bindblur="bindTextAreaBlur" bindconfirm="sendCom1" bindinput="bindTextAreaInput" auto-focus auto-height fixed="true" placeholder="{{tip}}" />
+            <button class="help-comment mini-btn" bindtap="sendCom1" size="mini">帮</button>
+            <button class="formal-comment mini-btn" bindtap="sendCom2" size="mini">喷</button>
+        </view>
+    </view>
+</view>

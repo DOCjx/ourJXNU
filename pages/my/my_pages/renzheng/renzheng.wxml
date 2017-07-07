@@ -1,0 +1,23 @@
+<!--pages/my/my_pages/renzheng/renzheng.wxml-->
+<!--<text>pages/my/my_pages/renzheng/renzheng.wxml</text>-->
+<view class="container">
+
+    <form bindsubmit="#">
+    <view class="top">
+        <input type="text" maxlength="12" placeholder="学号" focus/>
+    </view>
+
+    <view class="img">
+        <view class="imgs" formType="submit" bindtap="xxx">
+            上传学生证
+        </view>
+    </view>
+
+    <navigator url="../../../home/index">
+        <view class="button">
+            <button formType="submit" bindtap="ok">发布</button>
+        </view>
+    </navigator>
+    </form>
+
+</view>

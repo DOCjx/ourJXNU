@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="top-left">
+        姓名：{{userInfo.nickName}}  <icon type="success" size="12" color="rgb(0,180,205)"></icon>
+    </view>
+    <view class="top-center">
+        <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="top-right">
+        积分：280
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="con1">
+        <navigator url="my_pages/edit/edit">
+            <view class="c">
+                <image src="../../images/my-img/tu.png" style="width:13px; height:13px;"></image> 
+                信息编辑
+            <image src="../../images/my-img/tuq.png" style="width:12px; height:12px;" id="img_id"></image>
+            </view>
+        </navigator>
+        <view class="xian"></view>
+
+        <navigator url="my_pages/renzheng/renzheng">
+            <view class="c">
+            <image src="../../images/my-img/tu1.png" style="width:14px; height:14px;"></image> 
+                学生认证
+            <image src="../../images/my-img/tuq.png" style="width:12px; height:12px;" id="img_id"></image>
+            </view>
+        </navigator>
+    </view>
+
+    <view class="heng"></view>
+
+    <view class="con2">   
+        <navigator url="my_pages/dongtai/dongtai">     
+            <view class="c">
+            <image src="../../images/my-img/tu2.png" style="width:14px; height:14px;"></image>
+                发布动态
+            <image src="../../images/my-img/tuq.png" style="width:12px; height:12px;" id="img_id"></image>
+            </view>
+        </navigator>
+        <view class="xian"></view>
+
+        <navigator url="my_pages/collect/collect">
+            <view class="c">
+            <image src="../../images/my-img/tu3.png" style="width:14px; height:14px;"></image>
+                我的收藏
+            <image src="../../images/my-img/tuq.png" style="width:12px; height:12px;" id="img_id"></image>
+            </view>
+        </navigator>
+        <view class="xian"></view>
+
+        <navigator url="my_pages/focus/focus">
+            <view class="c">        
+            <image src="../../images/my-img/tu4.png" style="width:14px; height:14px;"></image>
+                我的关注
+            <image src="../../images/my-img/tuq.png" style="width:12px; height:12px;" id="img_id"></image>
+            </view>
+        </navigator>   
+    </view>
+
+    <view class="heng"></view>
+
+    <view class="con3">
+        <navigator url="my_pages/about/about">     
+            <view class="c">
+            <image src="../../images/my-img/tu5.png" style="width:14px; height:14px;"></image>
+                关于我们
+            <image src="../../images/my-img/tuq.png" style="width:12px; height:12px;" id="img_id"></image>
+            </view>
+        </navigator>  
+    </view>
+
+    <view class="xian"></view>
+    <!--<view class="heng"></view>-->
+
+  </view>
+
+</view>

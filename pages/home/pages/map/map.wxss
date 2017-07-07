@@ -1,0 +1,5 @@
+/* pages/home/pages/map/map.wxss */
+.page-section button{
+    position: fixed;
+    top:100vh;
+}

@@ -1,0 +1,54 @@
+<!--pages/my/my_pages/edit/edits/edits.wxml-->
+<!--<text>pages/my/my_pages/edit/edits/edits.wxml</text>-->
+
+<view class="container">
+
+    <form bindsubmit="#">
+    <view class="con">
+        <view class="content">
+            <view class="name">姓名</view>
+            <input type="text" placeholder="请输入" />
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="nicheng">昵称</view>
+            <input type="text" placeholder="请输入" />
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="xuehao">学号</view>
+            <input type="text" placeholder="请输入" />
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="sex">性别</view>
+            <input type="text" placeholder="请输入" />
+        </view>
+    </view>
+    <view class="xian"></view>
+
+    <view class="con">
+        <view class="content">
+            <view class="hobby">个人爱好</view>
+            <textarea placeholder="请输入" auto-height cursor-spacing="10px"/>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="gexing">个性签名</view>
+            <textarea placeholder="请输入"  auto-height cursor-spacing="10px"/>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="miaoshu">自我描述</view>
+            <textarea placeholder="请输入"  auto-height cursor-spacing="10px"/>
+        </view>
+    </view>
+
+    <navigator url="../edit">
+        <view class="button">
+            <button formType="submit" bindtap="xxx">保存</button>
+        </view>
+    </navigator>
+    </form>
+    
+</view>

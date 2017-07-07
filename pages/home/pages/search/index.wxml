@@ -1,0 +1,30 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <!--banner-->
+  <view class="search-bg" >
+    <!--搜索-->
+    <view class="search-box" style="margin-top:38rpx">
+      <input class="search-input" bindinput="changeValue" placeholder="搜索" value=""/>
+      <view class="search-btn" bindtap="toSearch">
+        <icon type="search"></icon>
+      </view>
+    </view>
+    <view class="category">
+      <text class="header">搜索指定内容</text>
+      <view class="category-con">
+        <navigator url="pages/searchHelp/index"><text>互助</text></navigator>
+        <navigator url="pages/searchFile/index"><text>资源</text></navigator>
+        <navigator url="pages/searchUser/index"><text>用户</text></navigator>
+        <navigator url="pages/searchScenery/index"><text>风景</text></navigator>
+      </view>
+    </view>
+  </view>
+  <!--banner end-->
+
+  <scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100" style="margin-top: 156rpx;">
+
+  <!--list-->
+
+  </scroll-view>
+
+</view>

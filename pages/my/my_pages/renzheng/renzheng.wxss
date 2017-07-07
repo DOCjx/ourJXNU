@@ -1,0 +1,56 @@
+/* pages/my/my_pages/renzheng/renzheng.wxss */
+
+page{
+    background-color: white;
+    display: block;
+    min-height: 100%;
+}
+
+.top{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    width: 100%;
+}
+
+.top input{
+    font-family: "微软雅黑";
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8px;
+    padding: 8px;
+    align-items: center;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    line-height: 25px;
+    min-height: 25px;
+}
+
+.img{
+    margin: 0 auto;
+    width: 300rpx;
+}
+.imgs{    
+    margin-top: 10px;
+    background-color: 	#F0F0F0;
+    opacity: 0.5;
+    text-align: center;
+    width: 300rpx;
+    line-height: 280rpx;
+    height: 280rpx;
+    border-bottom: 5 solid red;
+}
+
+navigator{
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+}
+button{    
+    border-radius: 3px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    background-color: #84C1FF;
+}

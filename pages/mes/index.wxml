@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  
+
+  <view class="message">
+
+    <view wx:for="{{list}}">
+        <view class="{{item.classNames}}">
+          <navigator url="{{item.navUrl}}" hover-class="className" class="news_detail">
+            <view class="img">
+            	<image src="{{item.imgUrl}}" class="mes-image"></image>
+            </view>
+            <view class="text">
+            	<text class="type-title">{{item.title}}</text>
+            	<text class="news-title">{{item.content}} | <text>{{item.formateTime}}</text></text>
+            </view>
+            <block wx:if="{{item.warning>0}}">
+              <view class="warnings">{{item.warning}}</view>
+            </block>        
+            <view class="bottom_line"></view>
+          </navigator>
+        </view>
+      </view>
+
+  </view>
+
+</view>

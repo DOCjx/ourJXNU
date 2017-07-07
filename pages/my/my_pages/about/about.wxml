@@ -1,0 +1,28 @@
+<!--pages/my/my_pages/about/about.wxml-->
+<!--<text>pages/my/my_pages/about/about.wxml</text>-->
+<view class="container">
+
+    <view class="top">
+        <view class="logo">
+            <image src="../../../../images/my-img/logo.jpg"></image>
+        </view>
+        <view class="banben">版本号：v0.0.3</view>
+        <view class="xian"></view>
+    </view>
+
+    <view class="content">
+        <view class="con">
+            “我们的师大”是一款主要针对在校大学生的微信小程序应用平台。</view>
+        <view class="con">
+           它是一个资源共享的平台，主要用于各种资源的共享，比如课上的PPT，课后的试卷，复习资料，实验的视频等，并且对这些资源进行分类一遍快速查找所需要的东西；
+        </view>
+        <view class="con">
+           它是一个交流平台，用于新生入学前的一些咨询，或者同学们的交流中心，实时了解到身边是否有需要帮助的。积累积分，下次可以使用积分发布请求帮助；
+        </view>
+         <view class="con">
+       它更是风景如画的校园的一个缩影，可以了解到校园实时热点，可以观赏美丽校园风光；校内用户可以结识更多的朋友、获取到想要的资料。
+        </view>
+       
+    </view>
+
+</view>

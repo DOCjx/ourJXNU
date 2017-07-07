@@ -1,0 +1,92 @@
+.container{
+    width: 95%;
+    /*border: 1px solid #666;*/
+    margin: auto;
+    font-size: 18px;
+}
+.item-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.item{
+    border: 1px solid #D8D8D8;
+    background-color: #FBFBFB;
+    width: 25vh;
+    padding: 5px;
+    border-radius: 41rpx;
+}
+.head{
+    display: flex;
+    align-items: center;
+}
+.head .pic{
+  width: 51px;
+  height: 51px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom .icon-group{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+}
+.icons text{
+    display: block;
+    padding: 5px;
+}
+.icon-collect image{
+    padding-left: 20px;
+    width: 26px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+.icon-collect,.icon-worth,.icon-download{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.setPostion{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.con-con{
+    font-size: 16px;
+    width: 73%;
+    position: relative;
+    top: -14px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.con-head image{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 50%;
+}
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

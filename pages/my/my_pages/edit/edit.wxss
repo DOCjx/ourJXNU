@@ -1,0 +1,64 @@
+/* pages/my/my_pages/edit/edit.wxss */
+
+page{
+    display: block;
+    min-height: 100%;
+    background-color: white;
+}
+
+.con{
+    margin-top: 20px;   
+    background-color: white; 
+}
+.names{
+    width: 160rpx;
+}
+.content{
+    margin: 0 20px 0;
+    width: 100%;
+    min-height: 36px;
+    line-height: 36px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    /*background-color: #FBFBFB;*/
+}
+
+.xian{
+    width: 90%;
+    margin-left: 5%;
+    height: 2px;
+    background-color: #F0F0F0;
+}
+
+.content .input{
+    padding-left: 50rpx;
+    font-family: "微软雅黑";
+    font-size: 15px;
+    max-width: 450rpx;
+}
+.content .inputs{
+    padding-left: 50rpx;
+    font-family: "微软雅黑";
+    font-size: 15px;
+    min-height: 25px;
+    line-height: 25px;
+    max-width: 450rpx;
+}
+
+navigator{
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+}
+button{    
+    border-radius: 3px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    background-color: #84C1FF;
+}

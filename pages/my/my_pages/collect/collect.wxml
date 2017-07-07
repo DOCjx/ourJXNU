@@ -1,0 +1,63 @@
+<!--pages/my/my_pages/collect/collect.wxml-->
+<!--<text>pages/my/my_pages/collect/collect.wxml</text>-->
+<view class="container">
+    <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="*this" bindtap="navbarTap">{{item}}</text> 
+    </view>
+  
+    <!--风景--> 
+    <view hidden="{{currentTab!==0}}">
+        <view class="fens">
+            <navigator url="#">
+            <view class="fenjing">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="fen">我发了一篇风景图我发了一篇风景图我发了一篇风景图我发了</view>
+            </view>
+            </navigator>
+            <view class="xian"></view>
+
+            <navigator url="#">
+            <view class="fenjing">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="fen">我发了一篇风景图我发了一篇风景图我发了一篇风景图我发了</view>
+            </view>
+            </navigator>
+            <view class="xian"></view>
+
+            <navigator url="#">
+            <view class="fenjing">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="fen">我发了一篇风景图我发了一篇风景图我发了一篇风景图我发了</view>
+            </view>
+            </navigator>
+            <view class="xian"></view>
+        </view>
+    </view> 
+  
+    <!--资源--> 
+    <view hidden="{{currentTab!==1}}"> 
+        <view class="ziyuan">
+            <navigator url="#">
+            <view class="zis">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="zi">计算机信息工程学院汇编考试卷</view>
+            </view>
+            </navigator>
+
+            <navigator url="#">
+            <view class="zis">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="zi">计算机信息工程学院汇编考试卷</view>
+            </view>
+            </navigator>
+
+            <navigator url="#">
+            <view class="zis">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="zi">计算机信息工程学院汇编考试卷</view>
+            </view>
+            </navigator>
+        </view>
+    </view> 
+    
+</view>

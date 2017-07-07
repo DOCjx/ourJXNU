@@ -1,0 +1,68 @@
+/**index.wxss**/
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: white;  
+}  
+
+.container{
+  font-family: "微软雅黑";
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+navigator{
+  background-color: #FBFBFB;
+}
+.top{
+  width: 100%;
+  height: 250rpx;
+  background-color: #00b4cd;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.content{
+  background-color: white;
+}
+
+.xian{
+  background-color: #E0E0E0;
+  height: 1px;
+  width: 94%;
+  margin-left: 3%;
+}
+
+.top-left,.top-center,.top-right{
+  width: 250rpx;
+  height: 350rpx;
+  text-align: center;
+  padding-top: 220rpx;
+}
+
+.top-left,.top-right{
+  margin-top: 80rpx;
+}
+
+.top-center image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.heng{
+  height:15px;
+  background-color: white;
+}
+
+.c{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  /*padding-bottom: 15px;*/
+}
+#img_id{
+  padding-left: 500rpx;
+}

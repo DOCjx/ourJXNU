@@ -1,0 +1,23 @@
+<!--pages/my/my_pages/dongtai/dongtai.wxml-->
+<!--<text>pages/my/my_pages/dongtai/dongtai.wxml</text>-->
+<view class="container">
+
+    <form bindsubmit="#">
+    <view class="top">
+        <textarea  auto-focus cursor-spacing="20px" maxlength="2000" fixed="true" placeholder="说点什么吧..." />
+    </view>
+
+    <!--<view class="img">
+        <view class="imgs" formType="submit" bindtap="xxx">
+            照片
+        </view>
+    </view>-->
+
+    <navigator url="../../../home/index">
+        <view class="button">
+            <button formType="submit" bindtap="ok">发布</button>
+        </view>
+    </navigator>
+    </form>
+
+</view>

@@ -1,0 +1,64 @@
+<!--pages/my/my_pages/focus/focus.wxml-->
+<!--<text>pages/my/my_pages/focus/focus.wxml</text>-->
+<view class="container">
+    
+    <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="*this" bindtap="navbarTap">{{item}}</text> 
+    </view>
+  
+    <!--问题--> 
+    <view hidden="{{currentTab!==0}}"> 
+        <view class="fens">
+            <navigator url="#">
+            <view class="fenjing">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="fen">我发了一个问题我发了一个问题</view>
+            </view>
+            </navigator>
+            <view class="xian"></view>
+
+            <navigator url="#">
+            <view class="fenjing">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="fen">我发了一个问题我发了一个问题我发了一个问题</view>
+            </view>
+            </navigator>
+            <view class="xian"></view>
+
+            <navigator url="#">
+            <view class="fenjing">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="fen">我发了一个问题我发了一个问题我发了一个问题</view>
+            </view>
+            </navigator>
+            <view class="xian"></view>
+        </view>
+    </view> 
+  
+    <!--用户--> 
+    <view hidden="{{currentTab!==1}}"> 
+        <view class="ziyuan">
+            <navigator url="#">
+            <view class="zis">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="zi">花儿与少年</view>
+            </view>
+            </navigator>
+
+            <navigator url="#">
+            <view class="zis">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="zi">花儿与少年</view>
+            </view>
+            </navigator>
+
+            <navigator url="#">
+            <view class="zis">
+                <image src="../../../../images/my-img/my.jpg"></image>
+                <view class="zi">花儿与少年</view>
+            </view>
+            </navigator>
+        </view>
+    </view> 
+
+</view>

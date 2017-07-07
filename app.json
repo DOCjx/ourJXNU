@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/home/pages/map/map",
+    "pages/home/pages/detail/detail",
+    "pages/home/pages/resourcesDetail/detail",
+    "pages/home/pages/search/index",
+    "pages/home/pages/search/pages/searchFile/index",
+    "pages/home/pages/search/pages/searchHelp/index",
+    "pages/home/pages/search/pages/searchUser/index",
+    "pages/home/pages/search/pages/searchScenery/index",
+    "pages/mes/index",
+    "pages/newsdetail/index",
+    "pages/my/index",
+    "pages/my/my_pages/about/about",
+    "pages/my/my_pages/focus/focus",
+    "pages/my/my_pages/collect/collect",
+    "pages/my/my_pages/dongtai/dongtai",
+    "pages/my/my_pages/renzheng/renzheng",
+    "pages/my/my_pages/edit/edit",
+    "pages/my/my_pages/edit/edits/edits",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#00b4cd",
+    "navigationBarTitleText": "我们的师大",
+    "navigationBarTextStyle":"white",
+    "backgroundTextStyle":"dark",
+    "backgroundColor":"#fff",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#00b4cd",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle":"dark",
+    "list": [{
+      "pagePath": "pages/home/index",
+      "iconPath": "images/icon/home.png",
+      "selectedIconPath": "images/icon/home_2.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/mes/index",
+      "iconPath": "images/icon/mes.png",
+      "selectedIconPath": "images/icon/mes_2.png",
+      "text": "消息"
+    }, {
+      "pagePath": "pages/my/index",
+      "iconPath": "images/icon/my.png",
+      "selectedIconPath": "images/icon/my_2.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

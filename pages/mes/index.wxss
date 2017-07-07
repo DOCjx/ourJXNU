@@ -1,0 +1,64 @@
+/**index.wxss**/
+.mutual-help{
+	display: flex;
+	position: relative;
+	width: 100%;
+	height:50px;
+	padding:10px 0 10px 10px;
+}
+.img{
+	height: 100%;
+	display: inline-block;
+	width: 15%;
+}
+.img .mes-image{
+	width: 100%;
+	border-radius: 50px;
+	height: 100%;
+	/*padding:10px;*/
+	display: inline-block;
+}
+.text{
+	height: 100%;
+	display: inline-block;
+	width: 50%;
+}
+.text .type-title,.text .news-title{
+	display: block;
+}
+.type-title{
+	font-weight: bold;
+}
+
+.news-title{
+	font-size:12px;
+	padding-top: 3px;
+	color:#999999;
+}
+
+.warnings{
+	background-color:#CC0000;
+	color:#fff;
+	height:42%;
+	width:6%;
+	font-size:14px;
+	text-align:center;
+	border-radius:50%;
+	position:relative;
+	right:-70px;
+	top:12px;
+}
+
+.bottom_line{
+	position: absolute;
+	bottom:0;
+	width: 97%;
+	height: 1px;
+	background-color:#ddd;
+}
+
+.news_detail{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}

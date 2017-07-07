@@ -1,0 +1,44 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+    <scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100">
+        <view wx:if="{{resourse.detail}}" class="item-list">
+            <block wx:for="{{resourse.detail}}">
+                <view class="item">
+                    <view class="head">
+                        <image class="pic" src="{{users[item.userId].pic}}"></image>
+                        <text class="head-LR">{{users[item.userId].name}}</text>
+                        <icon type="success" size="12" color="rgb(0,180,205)" />
+                    </view>
+                    <view class="bottom">
+                        <view class="con">
+                            <view class="setPostion">
+                                <view class="con-head">
+                                    <image style="background-color:{{resourcesColor[item.type-1]}}" class="icon" src="../../resources/extType/{{item.type}}.png"></image>
+                                </view>
+                                <view class="con-con" style="border:1px solid {{resourcesColor[item.type-1]}};color:{{resourcesColor[item.type-1]}}">
+                                    {{item.title}}
+                                </view>
+                            </view>
+                        </view>
+                        <view class="icon-group">
+                            <view class="icons icon-collect">
+                                <image id="{{item.id}}" bindtap="favTap" src="../../resources/{{item.fav?'collect.png':'collect_h.png'}}"/>
+                            </view>
+                            <view class="icons icon-worth">
+                                <text>{{item.type}}</text>
+                                <image class="icon" src="../../resources/worth.png"></image>
+                            </view>
+                            <view class="icons icon-download">
+                                <text>{{users[item.userId].count}}</text>
+                                <image class="icon" src="../../resources/download.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view wx:else class="error">
+            <text>还没有此类资源哦！</text>
+        </view>
+    </scroll-view>
+</view>

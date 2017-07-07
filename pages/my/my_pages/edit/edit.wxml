@@ -1,0 +1,50 @@
+<!--pages/my/my_pages/edit/edit.wxml-->
+<!--<text>pages/my/my_pages/edit/edit.wxml</text>-->
+<view class="container">
+    <view class="con">
+        <view class="content">
+            <view class="name">姓名</view>
+            <view class="input">{{xinxi[0]}}</view>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="name">昵称</view>
+            <view class="input">{{xinxi[1]}}</view>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="name">学号</view>
+            <view class="input">{{xinxi[2]}}</view>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="name">性别</view>
+            <view class="input">{{xinxi[3]}}</view>
+        </view>
+    </view>
+    <view class="xian"></view>
+
+    <view class="con">
+        <view class="content">
+            <view class="names">个人爱好</view>
+            <view class="inputs">{{xinxi[4]}}</view>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="names">个性签名</view>
+            <view class="inputs">{{xinxi[5]}}</view>
+        </view>
+        <view class="xian"></view>
+        <view class="content">
+            <view class="names">自我描述</view>
+            <view class="inputs">{{xinxi[6]}}</view>
+        </view>
+    </view>
+
+    <navigator url="edits/edits">
+        <view class="button">
+            <button>编辑</button>
+        </view>
+    </navigator>
+
+</view>
