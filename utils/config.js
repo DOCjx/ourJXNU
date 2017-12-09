@@ -1,7 +1,15 @@
 /**api链接 */
-const apiUrl = "https://api.douban.com/v2/book/";
+const baseUrl = 'https://localwechat.wvwvw.cn/';
+const apiUrl = baseUrl + "index.php/";
 
-module.exports = { 
-    getBookById: apiUrl,
-    searchBook: apiUrl + "search",
-    getBookList: apiUrl + "series/:id/books" }
+module.exports = {
+    getArticleList: apiUrl + "Article/getArticleList",
+    getArticleById: apiUrl + "Article/getArticleById",
+    getResourcesCategory: apiUrl + "Resources/getResourcesCategory",
+    getResourcesDetail: apiUrl + "Resources/getResourcesDetail",
+    getScenery: apiUrl + "Article/getScenery",
+    getUsers: apiUrl + "User/getUsers",
+    getToken: apiUrl + "User/getToken",
+    userRegiest: apiUrl + "User/userRegiest",
+    baseUrl
+}

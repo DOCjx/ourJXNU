@@ -1,8 +1,8 @@
 <!--pages/detail/detail.wxml-->
 <view class="container">
     <scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100">
-        <view wx:if="{{resourse.detail}}" class="item-list">
-            <block wx:for="{{resourse.detail}}">
+        <view wx:if="{{resourse}}" class="item-list">
+            <block wx:key="key" wx:for="{{resourse}}">
                 <view class="item">
                     <view class="head">
                         <image class="pic" src="{{users[item.userId].pic}}"></image>

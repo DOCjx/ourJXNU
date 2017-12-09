@@ -1,6 +1,8 @@
 // pages/my/my_pages/dongtai/dongtai.js
 Page({
-  data:{},
+  data:{
+    switchChecked: false
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
@@ -49,6 +51,12 @@ Page({
       title: '发表成功',
       icon: 'success',
     });
+  },
+  switch2Change(e){
+    this.setData({switchChecked: !this.data.switchChecked});
+  },
+  slider4change(e){
+
   }
 
 })

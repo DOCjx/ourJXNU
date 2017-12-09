@@ -11,24 +11,24 @@
         <view class="fens">
             <navigator url="#">
             <view class="fenjing">
-                <image src="../../../../images/my-img/my.jpg"></image>
-                <view class="fen">我发了一个问题我发了一个问题</view>
+                <image src="http://ockglmdea.bkt.clouddn.com/1.jpg"></image>
+                <view class="fen">谁遗失了身份证</view>
             </view>
             </navigator>
             <view class="xian"></view>
 
             <navigator url="#">
             <view class="fenjing">
-                <image src="../../../../images/my-img/my.jpg"></image>
-                <view class="fen">我发了一个问题我发了一个问题我发了一个问题</view>
+                <image src="http://ockglmdea.bkt.clouddn.com/psb.jpg"></image>
+                <view class="fen">招领启事</view>
             </view>
             </navigator>
             <view class="xian"></view>
 
             <navigator url="#">
             <view class="fenjing">
-                <image src="../../../../images/my-img/my.jpg"></image>
-                <view class="fen">我发了一个问题我发了一个问题我发了一个问题</view>
+                <image src="http://ockglmdea.bkt.clouddn.com/2.jpg"></image>
+                <view class="fen">好伤心咋办呀</view>
             </view>
             </navigator>
             <view class="xian"></view>
@@ -40,22 +40,22 @@
         <view class="ziyuan">
             <navigator url="#">
             <view class="zis">
-                <image src="../../../../images/my-img/my.jpg"></image>
-                <view class="zi">花儿与少年</view>
+                <image src="http://ockglmdea.bkt.clouddn.com/3.jpg"></image>
+                <view class="zi">小乔</view>
             </view>
             </navigator>
 
             <navigator url="#">
             <view class="zis">
-                <image src="../../../../images/my-img/my.jpg"></image>
-                <view class="zi">花儿与少年</view>
+                <image src="http://ockglmdea.bkt.clouddn.com/4.jpg"></image>
+                <view class="zi">勺子</view>
             </view>
             </navigator>
 
             <navigator url="#">
             <view class="zis">
-                <image src="../../../../images/my-img/my.jpg"></image>
-                <view class="zi">花儿与少年</view>
+                <image src="http://ockglmdea.bkt.clouddn.com/5.JPG"></image>
+                <view class="zi">狄仁杰</view>
             </view>
             </navigator>
         </view>

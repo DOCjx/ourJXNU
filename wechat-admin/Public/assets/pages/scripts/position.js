@@ -1,0 +1,1 @@
+var PositionNameNum=function(){var n=function(){$hyall.on("shown.hyall.form.add",function(n){var o=window.location.href,i=o.split("="),r=i[1];console.log(r),$("#recruitment_id").val(r),$("#recruitment_id").parents(".form-group").hide()})};return{init:function(){n()}}}();

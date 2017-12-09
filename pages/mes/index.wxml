@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  
+
 
   <view class="message">
 
-    <view wx:for="{{list}}">
+    <view wx:key="key" wx:for="{{list}}">
         <view class="{{item.classNames}}">
           <navigator url="{{item.navUrl}}" hover-class="className" class="news_detail">
             <view class="img">
@@ -16,7 +16,7 @@
             </view>
             <block wx:if="{{item.warning>0}}">
               <view class="warnings">{{item.warning}}</view>
-            </block>        
+            </block>
             <view class="bottom_line"></view>
           </navigator>
         </view>

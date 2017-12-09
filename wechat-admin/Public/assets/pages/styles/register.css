@@ -1,0 +1,371 @@
+@media (min-width: 800px) {
+	.phone{
+		display: none;
+	}
+	.table-responsive {
+	    min-height: .01%;
+	    overflow-x: visible;
+	}
+	.reg-container{
+		width: 1170px;
+		margin:auto;
+		min-height: 500px;
+		padding-top: 40px;
+	}
+	.reg-container .location{
+		height: 37px;
+		line-height: 40px;
+	}
+	.reg-container .location span{
+		margin-left: 50px;
+	}
+
+	.reg-container .main{
+		margin-top: 30px;
+		border-top: 1px solid #ddd;
+		margin-bottom: 150px;
+	}
+	.reg-container .main .left{
+		float:left;
+		width: 630px;
+		box-sizing: border-box;
+	}
+	.reg-container .main .table{/*
+		border-bottom: 1px solid #ddd;*/
+	}
+	.reg-container .main .table td{
+		border-top:none;
+		border-bottom: 1px solid #ddd;
+		width:50%;
+	}
+	
+	.reg-container .main .table td.intro{
+		border-top:none;
+		border-bottom: 1px solid #ddd;
+		width:50%;
+	}
+	.reg-container .main  .table td>span{
+		width: 110px;
+		line-height: 37px;
+		float: left;
+		text-align: right;
+	}
+	.reg-container .main  .table td>span:before{
+		content: " ";
+		font-size: 23px;
+		color: red;
+	}
+	.reg-container .main  .table td>span.must:before{
+		content: "*";
+		font-size: 23px;
+		color: red;
+	}
+	
+	.reg-container .main  .table td span.help-block{
+		width: 100%;
+	    text-align: left;
+	    padding-left: 100px;
+	    color: #32A1CE;
+	}
+	.reg-container .main  .table td>input,
+	.reg-container .main  .table td>select{
+		width: 182px;
+		height: 35px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		outline: none;
+		float: right;
+		padding-left: 10px;
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */
+		color: #8B0A12!important;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: #8B0A12!important;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: #8B0A12!important;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+		color: #8B0A12!important;
+	}
+	.reg-container .main .left .table td>input[name="address"],
+	.reg-container .main .left .table td>input[name="company_name"],
+	.reg-container .main .left .table td>input[name="homepage"]{
+		width: 515px;
+	}
+	.reg-container .main .left .intro{
+		padding: 8px;
+	}
+	.reg-container .main .left .table textarea{
+		width: 515px;
+		float: right;
+		min-height: 250px;
+		border-radius: 3px;
+		border: 1px solid #ddd;
+		resize: none;
+		outline: none;
+		padding: 5px 10px;
+	}
+	.attach .t1{
+		font-size: 20px;
+	}
+	.attach .t1:before{
+		content:"";
+		height: 18px;
+		display: inline-block;
+		width: 3px;
+		background: #84B6DB;
+		margin-right: 10px;
+		position:relative;
+		top: 3px;
+	}
+	.attach .table tr{
+		min-height: 150px;
+	    display: inline-block;
+	    width: 100%;
+	    border-top: 1px solid #ddd;
+	}
+	.attach .table tr td:nth-child(2){
+		position: relative;
+	}
+	.attach .table td:first-child{
+		width: 95px;
+		text-align: right;
+		font-size: 18px;
+	}
+	.attach .table td{
+		border:none;
+		padding-bottom: 50px;
+	}
+	.attach .table .btn-lg{
+		padding: 4px;
+	}
+	.reg-container .main .right{
+		float: right;
+		width: 540px;
+		box-sizing: border-box;
+	}
+	.reg-container .main .right input{
+		width: 395px!important;
+	}
+	.reg-container .main .right textarea{
+		min-height: 250px;
+		border-radius: 3px;
+		border: 1px solid #ddd;
+		resize: none;
+		outline: none;
+		padding: 5px 10px;
+	}
+	.reg-container .main .right .attach>input{
+		width: 100%;
+		height: 37px;
+		line-height: 37px;
+		margin-top: 13px;
+		border-radius: 3px;
+		border: 1px solid #84b6db;
+		background: #84b6db;
+		color: #fff;
+	}
+	.intro>span {
+	    width: 120px;
+	    line-height: 37px;
+	    float: left;
+	    text-align: right;
+	}
+	.contain{
+		overflow: visible;
+	}
+	.intro{
+		overflow: hidden;
+		width: 1170px;
+	}
+	.wysiwyg-container.some-more-classes {
+	    width: 1044px;
+	    float: right;
+	    min-height: 450px;
+	    border-radius: 3px;
+	    border: 1px solid #ddd;
+	    resize: none;
+	    outline: none;
+	    padding: 5px 10px;
+	}
+	form.register-form input[type='submit']{
+    	float: right;
+	    border: none;
+	    height: 41px;
+	    margin-top: 50px;
+	    background-color: #84B6DB;
+	}
+}
+@media (max-width: 799px) {
+	span.com-intro {
+	    display: block;
+	    width: 100%!important;
+	    text-align: center!important;
+	}
+	.wysiwyg-container.some-more-classes {
+	    width: 100%;
+	    float: right;
+	    min-height: 250px;
+	    border-radius: 3px;
+	    border: 1px solid #ddd;
+	    resize: none;
+	    outline: none;
+	    padding: 5px 10px;
+	    white-space: normal;
+	}
+	.btn-file span.help-block{
+		margin: 0;
+	}
+	.pc{
+		display: none;
+	}
+	.reg-container{
+		width: 100%;
+		padding-top: 40px;
+	}
+	.reg-container .location{
+		height: 37px;
+		line-height: 40px;
+	}
+	.reg-container .location span{
+		margin-left: 50px;
+	}
+
+	.reg-container .main{
+		overflow: hidden;
+		margin-top: 30px;
+		border-top: 1px solid #ddd;
+	}
+	.reg-container .main .left{
+		width: 100%;
+	}
+	.reg-container .main .left .table{/*
+		border-bottom: 1px solid #ddd;*/
+	}
+	.reg-container .main .left .table td{
+		border-top:none;
+		border-bottom: 1px solid #ddd;
+		width:100%;
+	}
+	
+	.reg-container .main .left .table td span{
+		width: 30%;
+		line-height: 37px;
+		float: left;
+		text-align: right;
+	}
+	.reg-container .main .left .table td span.help-block{
+		    margin-left: 32%;
+		    color: #AD6363;
+		    line-height: 10px;
+	}
+	.reg-container .main .left .table td span.file-input{
+		width: 70%;
+	}
+	.reg-container .main .left .table td>input,
+	.reg-container .main .left .table td>select{
+		width: 70%;
+		height: 35px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		outline: none;
+		float: right;
+		padding-left: 10px;
+	}
+	.reg-container .main .right{
+		width: 100%;
+		box-sizing: border-box;
+		padding:0 25px 0 25px;
+	}
+	.reg-container .main .left textarea{
+		width: 70%;
+		min-height: 150px;
+		border-radius: 3px;
+		border: 1px solid #ddd;
+		resize: none;
+		outline: none;
+		padding: 5px 10px;
+	}
+	.reg-container .main .left .img{
+		display:block;
+		overflow:hidden;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+	}
+	.reg-container .main .left .img span:first-child{
+		width: 30%;
+		text-align: right;
+		float: left;
+	}
+	.reg-container .main .left .img .file-input{
+		width: 70%;
+		display: inline-block;
+		padding-bottom: 50px;
+	}
+	.reg-container .main .left .img .btn-lg{
+		padding: 4px;
+	}
+	.reg-container .main .right input{
+		width: 100%;
+		height: 37px;
+		line-height: 37px;
+		margin-top: 13px;
+		border-radius: 3px;
+		border: 1px solid #84b6db;
+		background: #84b6db;
+		color: #fff;
+	}
+	.table-responsive{
+		border:none;
+	}
+}
+
+.button {
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 180px;
+    height: 35px;
+    /* border: 1px solid #ddd; */
+    border-radius: 3px;
+    outline: none;
+    float: right;
+}
+/* CSS for the font-name + font-size plugin */
+.wysiwyg-toolbar-list {
+    max-height: 16em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.wysiwyg-toolbar-list a,
+.wysiwyg-toolbar-list a:link,
+.wysiwyg-toolbar-list a:visited {
+    display: block;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.wysiwyg-toolbar-list a:hover {
+    color: HighlightText;
+    background-color: Highlight;
+}
+/* CSS for the smiley plugin */
+.wysiwyg-toolbar-smilies {
+    padding: 10px;
+    text-align: center;
+    white-space: normal;
+}
+.wysiwyg-toolbar-smilies img {
+    display: -moz-inline-stack; /* inline-block: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */
+    display: inline-block;
+    *display: inline;
+}

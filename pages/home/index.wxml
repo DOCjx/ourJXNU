@@ -1,16 +1,14 @@
 <!--index.wxml-->
 <view class="container">
-	<scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100">
+	<scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" scroll-top="100">
     <!--banner-->
     <view class="banner-box page-section page-section-spacing swiper">
-      
 
       <!--搜索-->
       <navigator url="pages/search/index" hover-class="className" class="search-box">
         <icon type="search"></icon>
         <text class="search-input">搜全部</text>
       </navigator>
-	    
 
       <!--背景-->
 	    <swiper class="banner-bg" indicator-dots="{{indicatorDots}}"
@@ -25,7 +23,7 @@
 	    </swiper>
 	  </view>
     <!--banner end-->
-	
+
   	<view class="nav-section">
       <view class="nav-section-spacing">
         <view class="flex-wrp" style="flex-direction:row;">
@@ -35,7 +33,11 @@
         </view>
       </view>
     </view>
-    
+
+    <block wx:if="{{progress.isShow && progress.superShow}}">
+        <progress percent="{{progress.percent}}" color="#00b4cd" show-info />
+    </block>
+
     <!--wrapperContent-->
     <block wx:if="{{navTo==1}}">
       <view class="wrapper-content">
@@ -50,100 +52,100 @@
             </view>
           </view>
           <view class="news-item-container">
-            <block wx:for="{{List}}" wx:for-index="id">
-              <view class="news-item" >
-                <view class="news-item-header">
-                  <view class="news-item-left">
-                    <image src="{{item.author.pic}}" background-size="cover" class="news-image"/>
-                    <view class="left-right">
-                      <view class="top"> {{item.author.name}}</view>
-                      <view class="down"> 实名认证：<icon type="success" size="12" color="rgb(0,180,205)"></icon></view>
+            <block wx:for="{{List}}" wx:key="key" wx:for-index="id">
+              <block wx:if="{{id < toRe}}">
+                <view class="news-item" >
+                  <view class="news-item-header">
+                    <view class="news-item-left">
+                      <image src="{{item.author.pic}}" background-size="cover" class="news-image"/>
+                      <view class="left-right">
+                        <view class="top"> {{item.author.name}}</view>
+                        <view class="down"> 实名认证：<icon type="success" size="12" color="rgb(0,180,205)"></icon></view>
+                      </view>
                     </view>
-                  </view>
-                  <view class="news-item-right">
-                    <block wx:if="{{item.formatTime == 0}}">
-                      <view class="formateTime3">已过期!</view>
-                    </block>
-                      <block wx:else>
-                      <!-- 天数大于2 -->
-                      <block wx:if="{{item.formatTime[2] > 2}}">
-                        <view class="formateTime1">还剩余：大把时间!</view>
+                    <view class="news-item-right">
+                      <block wx:if="{{item.formatTime == 0}}">
+                        <view class="formateTime3">已过期!</view>
                       </block>
-                      <!-- 天数大于0 -->
-                      <block wx:elif="{{item.formatTime[2] > 0}}">
-                        <view class="formateTime2">还剩余：{{item.formatTime[2]}}天{{item.formatTime[3]}}小时</view>
-                      </block>
-                      <block wx:else>
-                        <!-- 小时数大于0 -->
-                        <block wx:if="{{item.formatTime[3] > 0}}">
-                          <view class="formateTime3">还剩余：{{item.formatTime[3]}}小时{{item.formatTime[4]}}分{{item.formatTime[5]}}</view>
+                        <block wx:else>
+                        <!-- 天数大于2 -->
+                        <block wx:if="{{item.formatTime[2] > 2}}">
+                          <view class="formateTime1">还剩余：大把时间!</view>
+                        </block>
+                        <!-- 天数大于0 -->
+                        <block wx:elif="{{item.formatTime[2] > 0}}">
+                          <view class="formateTime2">还剩余：{{item.formatTime[2]}}天{{item.formatTime[3]}}小时</view>
                         </block>
                         <block wx:else>
-                          <!-- 剩余分钟数大于0 -->
-                          <block wx:if="{{item.formatTime[4] > 0}}">
-                            <view class="formateTime3">还剩余：{{item.formatTime[4]}}分{{item.formatTime[5]}}</view>
-                          </block>
-                          <block wx:elif="{{item.formatTime[4] == 0}}">
-                            <view class="formateTime3">还剩余：{{item.formatTime[5]}}秒</view>
+                          <!-- 小时数大于0 -->
+                          <block wx:if="{{item.formatTime[3] > 0}}">
+                            <view class="formateTime3">还剩余：{{item.formatTime[3]}}小时{{item.formatTime[4]}}分{{item.formatTime[5]}}</view>
                           </block>
                           <block wx:else>
-                            <view class="formateTime1">还剩余：大把时间!</view>
+                            <!-- 剩余分钟数大于0 -->
+                            <block wx:if="{{item.formatTime[4] > 0}}">
+                              <view class="formateTime3">还剩余：{{item.formatTime[4]}}分{{item.formatTime[5]}}</view>
+                            </block>
+                            <block wx:elif="{{item.formatTime[4] == 0}}">
+                              <view class="formateTime3">还剩余：{{item.formatTime[5]}}秒</view>
+                            </block>
+                            <block wx:else>
+                              <view class="formateTime1">还剩余：大把时间!</view>
+                            </block>
                           </block>
                         </block>
                       </block>
-                    </block>
-                  </view>
-                </view>
-                <text wx:if="{{item.header}}" class="sub-title">{{item.header}}
-                </text>
-                <navigator wx:else url="pages/detail/detail?id={{item.id}}">
-                  <view class="news-item-content">
-                    <view wx:if="{{item.image}}" class="newsItemConImg">
-                      <image mode="aspectFill" data-imgUrl="{{item.image}}" bindtap="previewImg" mode="aspectFill" src="{{item.image}}"/>
                     </view>
-                    <text class="news-item-title">{{item.summary}}</text>
                   </view>
-                </navigator>
-                <view class="news-item-footer">
-                  <view class="news-item-footerL"> 
-                    <image style="width:18px;height:18px" src="resources/worth.png"/>
-                    <text>{{item.price[0]+item.price[1]}}</text>
+                  <text wx:if="{{item.header}}" class="sub-title">{{item.header}}
+                  </text>
+                  <navigator wx:else url="pages/detail/detail?id={{item.id}}">
+                    <view class="news-item-content">
+                      <view wx:if="{{item.image}}" class="newsItemConImg">
+                        <image mode="aspectFit" data-imgUrl="{{item.image}}" src="{{item.image}}"/>
+                      </view>
+                      <text class="news-item-title">{{item.summary}}</text>
+                    </view>
+                  </navigator>
+                  <view class="news-item-footer">
+                    <view class="news-item-footerL">
+                      <image style="width:18px;height:18px" src="resources/worth.png"/>
+                      <text>{{item.price[0]+item.price[1]}}</text>
+                    </view>
+                    <view class="news-item-footerML">
+                      <navigator url="pages/detail/detail?id={{item.id}}">
+                        <image style="width:18px;height:18px" src="resources/wechat.png"/><text>{{item.pages[0]+item.pages[1]+item.pages[2]}}</text>
+                      </navigator>
+                    </view>
+                    <view class="news-item-footerMR">
+                        <image id="{{item.id}}" bindtap="favTap" style="width:22px;height:22px" src="resources/{{item.favorite?'collect.png':'collect_h.png'}}"/>
+                    </view>
+                    <view class="news-item-footerR">
+                      <block wx:if="{{item.markers[0]}}">
+                        <navigator url="pages/map/map?latitude={{item.markers[0].latitude}}&longitude={{item.markers[0].longitude}}&name={{item.markers[0].name}}">
+                          <image style="width:32px;height:32px" src="resources/location.png"/>
+                        </navigator>
+                      </block>
+                      <block wx:else>
+                          <image style="width:32px;height:32px" src="resources/location_h.png"/>
+                      </block>
+                    </view>
                   </view>
-                  <view class="news-item-footerML">
-                    <navigator url="pages/detail/detail?id={{item.id}}">
-                      <image style="width:18px;height:18px" src="resources/wechat.png"/><text>{{item.pages[0]+item.pages[1]+item.pages[2]}}</text>
+                  <view class="news-item-note">
+                    <navigator class="note-detail" url="pages/detail/detail?id={{item.id}}">
+                      <block wx:key="key" wx:for="{{item.tags}}">
+                        <view wx:if="{{index < 3}}">
+                          {{item.name}}:{{item.title}}
+                        </view>
+                      </block>
                     </navigator>
                   </view>
-                  <view class="news-item-footerMR">
-                      <image id="{{item.id}}" bindtap="favTap" style="width:22px;height:22px" src="resources/{{item.favorite?'collect.png':'collect_h.png'}}"/>
-                  </view>
-                  <view class="news-item-footerR">
-                    <block wx:if="{{item.markers[0]}}">
-                      <navigator url="pages/map/map?latitude={{item.markers[0].latitude}}&longitude={{item.markers[0].longitude}}&name={{item.markers[0].name}}">
-                        <image style="width:32px;height:32px" src="resources/location.png"/>
-                      </navigator>
-                    </block>
-                    <block wx:else>
-                        <image style="width:32px;height:32px" src="resources/location_h.png"/>
-                    </block>
-                  </view>
                 </view>
-                <view class="news-item-note">
-                  <navigator class="note-detail" url="pages/detail/detail?id={{item.id}}">
-                    <block wx:for="{{item.tags}}">
-                      <view wx:if="{{index < 3}}">
-                        {{item.name}}:{{item.title}}
-                      </view>
-                    </block>
-                  </navigator>
-                </view>
-              </view>
+              </block>
             </block>
            </view>
         </view>
     </block>
-
-
 
     <!--wrapperContent1-->
     <block wx:if="{{navTo==2}}">
@@ -169,12 +171,10 @@
                 <view wx:else class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
                   <view class="navigator-box tag-box {{item.open ? 'navigator-box-show' : ''}}">
                     <block wx:for-items="{{item.tags}}" wx:for-item="page" wx:key="*item">
-                      <!--<navigator url="pages/{{page}}/{{page}}">-->
-                        <view class="tag" style="background-color:{{resourcesColor[page.type-1]}}">
-                          {{page.title}}
-                          <image class="extType" src="resources/extType/{{page.type}}.png"/>
-                        </view>
-                      <!--</navigator>-->
+                      <button class="tag" disabled="{{page.isDownload}}" loading="{{page.isLoading}}" data-uri="{{page.uri}}" bindtap="downloadFile" style="background-color:{{resourcesColor[page.type-1]}}">
+                        {{page.title}}
+                        <image class="extType" src="resources/extType/{{page.type}}.png"/>
+                      </button>
                     </block>
                   </view>
                 </view>
@@ -182,25 +182,25 @@
             </block>
           </view>
           <view class="more">
-            <image src="resources/add.png"></image>
+            <navigator url="#">
+              <image  bindtap="upload" src="resources/add.png"></image>
+            </navigator>
           </view>
         </view>
       </view>
     </block>
 
-
-
     <!--wrapperContent2-->
     <block wx:if="{{navTo==3}}">
       <view class="wrapper-content">
           <view class="scenery-item-container">
-            <block wx:for="{{scenery}}" wx:for-index="i">
+            <block wx:key="key" wx:for="{{scenery}}" wx:for-index="i">
               <view class="scenery-item" >
                 <view class="scenery-item-header">
-                  <view class="scenery-item-headerL"> 
+                  <view class="scenery-item-headerL">
                     <navigator url="#">
                         <image style="width:18px;height:18px" src="resources/wechat.png"/><text>{{item.comments}}</text>
-                      </navigator>
+                    </navigator>
                   </view>
                   <view class="scenery-item-headerM">
                       <image id="{{item.id}}" name="aa" bindtap="favTap3" style="width:22px;height:22px" src="resources/{{item.fav?'collect.png':'collect_h.png'}}"/>
@@ -216,12 +216,12 @@
                     </block>
                   </view>
                 </view>
-                <navigator url="#">
+                <!-- <navigator url="#"> -->
                   <view class="scenery-item-content">
-                      <image mode="aspectFill" data-imgUrl="{{item.image}}" bindtap="previewImg" mode="aspectFill" src="{{item.image}}"/>
+                      <image bindtap="previewImg" mode="aspectFit" data-imgUrl="{{item.image}}" src="{{item.image}}"/>
                   </view>
                   <text class="scenery-item-title">{{item.summary}}</text>
-                </navigator>
+                <!-- </navigator> -->
               </view>
             </block>
            </view>

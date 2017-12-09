@@ -18,8 +18,8 @@ Page({
           "imgUrl":"resources/help.png",
           "navUrl":"../newsdetail/index",
           "time":1492712609000,
-          "content":"毕业季高校鱼塘大赛",
-          "warning":3,
+          "content":"这就是答案了。",
+          "warning":1,
           "classNames":"mutual-help"
         },
         {
@@ -27,8 +27,8 @@ Page({
           "imgUrl":"resources/scenery.png",
           "navUrl":"../newsdetail/index",
           "time":1492712603000,
-          "content":"毕业季高校鱼塘大赛",
-          "warning":2,
+          "content":"好美，我需要的！",
+          "warning":1,
           "classNames":"mutual-help"
         },
         {
@@ -36,11 +36,11 @@ Page({
           "imgUrl":"resources/following.png",
           "navUrl":"../newsdetail/index",
           "time":1492712609000,
-          "content":"毕业季高校鱼塘大赛",
-          "warning":0,
+          "content":"资源有更新！",
+          "warning":1,
           "classNames":"mutual-help"
         }
-    ]    
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -67,9 +67,9 @@ Page({
           if(year) return year+"年前"
 
 
-          month = Math.floor(times/MONTH) 
+          month = Math.floor(times/MONTH)
           if(month) return month+"个月前"
-            
+
           day = Math.floor(times/DAY)
           if(day) return day+"天前"
 
@@ -83,22 +83,22 @@ Page({
           if(second) return second+"小时前"
 
         }
-    }  
+    }
     (function(that){
 
       setInterval(function(){
         nowTime = (new Date()).getTime();
         for(var i=0,len=that.data.list.length;i<len;i++){
           that.data.list[i].formateTime = formateTime(nowTime);
-          
-        }  
+
+        }
 
         that.setData({
           list:that.data.list
         })
         //console.log("time："+that.data.list[0].formateTime)
       },1000)
-        
+
     })(that)
 
 

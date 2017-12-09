@@ -4,14 +4,14 @@
   <view class="news_list" >
       <navigator url="../newsdetail/index" hover-class="className" class="news_detail">
           <view class="avatar_img">
-            <image src="resources/avatar.jpg" class="mes-image"></image>
+            <image src="http://ockglmdea.bkt.clouddn.com/5.JPG" class="mes-image"></image>
           </view>
           <view class="news_text">
             <view class="user_warn">
-              <text class="username">Alive</text> 
+              <text class="username">李元</text> 
               给你发来了一条消息
             </view>
-            <text class="news_info">这篇文章很不错 | <text>1天前</text></text>
+            <text class="news_info">就是这个答案了 | <text>2分钟前</text></text>
           </view>
           <view class="bottom_line"></view>
       </navigator>

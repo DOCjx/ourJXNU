@@ -3,21 +3,37 @@
 <view class="container">
 
     <form bindsubmit="#">
-    <view class="top">
-        <textarea  auto-focus cursor-spacing="20px" maxlength="2000" fixed="true" placeholder="说点什么吧..." />
-    </view>
-
-    <!--<view class="img">
-        <view class="imgs" formType="submit" bindtap="xxx">
-            照片
+        <view class="top">
+            <textarea  auto-focus cursor-spacing="20px" maxlength="2000" fixed="true" placeholder="说点什么吧..." />
         </view>
-    </view>-->
 
-    <navigator url="../../../home/index">
-        <view class="button">
-            <button formType="submit" bindtap="ok">发布</button>
+        <view class="img">
+            <view class="imgs" formType="submit" bindtap="xxx">
+                照片
+            </view>
+            <view class="select">
+                <label class="slider" for="vSlider">
+                    <block>价值</block>
+                    <slider id="vSlider" activeColor="#00b4cd" bindchange="slider4change" min="5" max="20" show-value/>
+                </label>
+                <view>
+                    <label class="switch">
+                        <switch color="#00b4cd" bindchange="switch2Change"/>
+                        <block wx:if="{{ switchChecked }}">互助</block>
+                        <block wx:else >风景</block>
+                    </label>
+                    <label class="position" for="position">
+                        <checkbox color="#00b4cd" value="selected" id="position"></checkbox>位置
+                    </label>
+                </view>
+            </view>
         </view>
-    </navigator>
+
+        <navigator url="../../../home/index">
+            <view class="button">
+                <button formType="submit" bindtap="ok">发布</button>
+            </view>
+        </navigator>
     </form>
 
 </view>

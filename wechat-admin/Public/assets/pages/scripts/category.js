@@ -1,0 +1,1 @@
+var Category=function(){var n=function(){var n=$hyall.getFormModal();n.on("change","#pid",function(){$(this).val()?$("#name").parent().parent()[0].style.display="":$("#name").parent().parent()[0].style.display="none"})};return{init:function(){n()}}}();

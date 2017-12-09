@@ -1,0 +1,14 @@
+.dt-top-actions>a:nth-child(1){
+    color: #fff;
+    background-color: #26344B !important;
+    border-color: #26344B;
+}
+.dt-top-actions>a:nth-child(1) hover{
+    color: #fff;
+}
+
+/*.dt-btm-actions>a:nth-child(2){*/
+    /*color: #fff;*/
+    /*background-color: #26344B !important;*/
+    /*border-color: #26344B;*/
+/*}*/

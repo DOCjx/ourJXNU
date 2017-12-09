@@ -1,6 +1,12 @@
 // pages/my/my_pages/edit/edits/edits.js
 Page({
-  data:{},
+  data: {
+    xinxi: ['张三', '稻壳er', '201526204070', '男',
+      '打球，看球，谈球，玩代码',
+      'believe you can make it,and you will succeed!',
+      '热于助人，热于写代码',
+    ]
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },

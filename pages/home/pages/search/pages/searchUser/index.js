@@ -1,6 +1,5 @@
 // pages/search/search.js
 const request=require("../../../../../../utils/requests");
-var star = require("../../../../../../utils/star");
 Page({
   data:{
       value:"",
@@ -41,7 +40,7 @@ Page({
         else
         {
             wx.showToast({
-                title: '请输入书名',
+                title: '请输入',
                 icon:"loading"
             })
         }

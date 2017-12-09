@@ -15,8 +15,11 @@ page{
 .img{
     margin: 0 auto;
     width: 708rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.imgs{    
+.imgs{
     margin-top: 10px;
     background-color: #FBFBFB;
     opacity: 0.5;
@@ -38,6 +41,14 @@ page{
     line-height: 28px;
     min-height: 140px;
 }
+.select{
+    font-size: 16px;
+    background-color: #FBFBFB;
+    padding: 10px;
+}
+.position{
+    margin-left: 10px;
+}
 navigator{
     margin: auto;
     margin-top: 20px;
@@ -46,9 +57,9 @@ navigator{
     height: 40px;
     line-height: 40px;
 }
-button{    
+button{
     border-radius: 3px;
     font-family: "微软雅黑";
     font-size: 16px;
-    background-color: #84C1FF;
+    background-color: #00b4cd;
 }

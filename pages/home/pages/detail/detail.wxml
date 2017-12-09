@@ -2,31 +2,31 @@
 <view class="container">
     <scroll-view class="wrapper-scroll" scroll-y="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100">
         <view class="userInfo">
-            <image src="{{bookInfo.author.pic}}" background-size="cover" class="news-image"/>
+            <image src="{{article.author.pic}}" background-size="cover" class="news-image"/>
             <view class="left-right">
-              <view class="top"> {{bookInfo.author.name}}</view>
+              <view class="top"> {{article.author.name}}</view>
               <view class="down"> 2小时前</view>
             </view>
         </view>
         <view class="detail">
             <view class="detail-con">
-                <view class="detail-summary">{{bookInfo.summary}}</view>
-                <view wx:if="{{bookInfo.image}}" class="newsbookInfoConImg">
-                    <image mode="aspectFill" data-imgUrl="{{bookInfo.image}}" bindtap="previewImg" mode="aspectFill" src="{{bookInfo.image}}"/>
+                <view class="detail-summary">{{article.summary}}</view>
+                <view wx:if="{{article.image}}" class="newsbookInfoConImg">
+                    <image mode="aspectFit" bindtap="previewImg" data-imgUrl="{{article.image}}" src="{{article.image}}"/>
                 </view>
             </view>
             <view class="detail-foo">
-                <view class="detail-fooL"> 
+                <view class="detail-fooL">
                     <image style="width:18px;height:18px" src="../../resources/worth.png"/>
-                    <text>{{bookInfo.price[0]+bookInfo.price[1]}}</text>
+                    <text>{{article.price[0]+article.price[1]}}</text>
                 </view>
                 <view class="detail-fooM">
                     <image style="width:18px;height:18px" src="../../resources/wechat.png"/>
-                    <text>{{bookInfo.pages[0]+bookInfo.pages[1]+bookInfo.pages[2]}}</text>
+                    <text>{{article.pages[0]+article.pages[1]+article.pages[2]}}</text>
                 </view>
                 <view class="detail-fooR">
-                    <block wx:if="{{bookInfo.markers[0]}}">
-                      <navigator url="../map/map?latitude={{bookInfo.markers[0].latitude}}&longitude={{bookInfo.markers[0].longitude}}&name={{bookInfo.markers[0].name}}">
+                    <block wx:if="{{article.markers[0]}}">
+                      <navigator url="../map/map?latitude={{article.markers[0].latitude}}&longitude={{article.markers[0].longitude}}&name={{article.markers[0].name}}">
                         <image style="width:32px;height:32px" src="../../resources/location.png"/>
                       </navigator>
                     </block>
@@ -38,7 +38,7 @@
         </view>
         <view class="detail-note">
             <view class="detail-note-head">最热评论</view>
-            <block wx:for="{{bookInfo.tags}}">
+            <block wx:key="key" wx:for="{{article.tags}}">
                 <view wx:if="{{index < 3}}" class="detail-note-hot">
                     <view class="detail-note-CL">
                         <image src="{{item.pic}}" background-size="cover" class="comment-user-icon"/>
@@ -60,61 +60,61 @@
                 </view>
             </block>
             <view class="detail-note-head">最新评论</view>
-            <block wx:for="{{bookInfo.tags}}">
+            <block wx:key="key" wx:for="{{article.tags}}">
                 <view wx:if="{{index == 5}}" class="detail-note-update">
                     <view class="detail-note-CL">
-                        <image src="{{bookInfo.tags[2].pic}}" background-size="cover" class="comment-user-icon"/>
+                        <image src="{{article.tags[2].pic}}" background-size="cover" class="comment-user-icon"/>
                     </view>
                     <view class="detail-note-CR">
                         <view class="detail-note-RT">
                             <view  class="detail-note-RTL">
-                                {{bookInfo.tags[2].name}}
+                                {{article.tags[2].name}}
                             </view>
                             <view  class="detail-note-RTR">
-                                {{bookInfo.tags[2].count}}
-                                <image id="{{bookInfo.tags[2].name}}" bindtap="favTap" src="../../resources/{{bookInfo.tags[2].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                                {{article.tags[2].count}}
+                                <image id="{{article.tags[2].name}}" bindtap="favTap" src="../../resources/{{article.tags[2].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
                             </view>
                         </view>
                         <view class="detail-note-RB">
-                            {{bookInfo.tags[2].title}}
+                            {{article.tags[2].title}}
                         </view>
                     </view>
                 </view>
                 <view wx:if="{{index == 4}}" class="detail-note-update">
                     <view class="detail-note-CL">
-                        <image src="{{bookInfo.tags[0].pic}}" background-size="cover" class="comment-user-icon"/>
+                        <image src="{{article.tags[0].pic}}" background-size="cover" class="comment-user-icon"/>
                     </view>
                     <view class="detail-note-CR">
                         <view class="detail-note-RT">
                             <view  class="detail-note-RTL">
-                                {{bookInfo.tags[0].name}}
+                                {{article.tags[0].name}}
                             </view>
                             <view  class="detail-note-RTR">
-                                {{bookInfo.tags[0].count}}
-                                <image id="{{bookInfo.tags[0].name}}" bindtap="favTap" src="../../resources/{{bookInfo.tags[0].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                                {{article.tags[0].count}}
+                                <image id="{{article.tags[0].name}}" bindtap="favTap" src="../../resources/{{article.tags[0].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
                             </view>
                         </view>
                         <view class="detail-note-RB">
-                            {{bookInfo.tags[0].title}}
+                            {{article.tags[0].title}}
                         </view>
                     </view>
                 </view>
                 <view wx:if="{{index == 4}}" class="detail-note-update">
                     <view class="detail-note-CL">
-                        <image src="{{bookInfo.tags[1].pic}}" background-size="cover" class="comment-user-icon"/>
+                        <image src="{{article.tags[1].pic}}" background-size="cover" class="comment-user-icon"/>
                     </view>
                     <view class="detail-note-CR">
                         <view class="detail-note-RT">
                             <view  class="detail-note-RTL">
-                                {{bookInfo.tags[1].name}}
+                                {{article.tags[1].name}}
                             </view>
                             <view  class="detail-note-RTR">
-                                {{bookInfo.tags[1].count}}
-                                <image id="{{bookInfo.tags[1].name}}" bindtap="favTap" src="../../resources/{{bookInfo.tags[1].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
+                                {{article.tags[1].count}}
+                                <image id="{{article.tags[1].name}}" bindtap="favTap" src="../../resources/{{article.tags[1].fav?'like.png':'like_h.png'}}" background-size="cover" class="like-icon"/>
                             </view>
                         </view>
                         <view class="detail-note-RB">
-                            {{bookInfo.tags[1].title}}
+                            {{article.tags[1].title}}
                         </view>
                     </view>
                 </view>

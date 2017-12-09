@@ -1,28 +1,69 @@
 var api = require('./config.js');
+var util = require('./util.js');
+var app = getApp();
+
 //网络请求模块
 function request(url, data, successCb, errorCb, completeCb) {
-    wx.request({
-        url: url,
-        method: 'GET',
-        data: data,
-        success: successCb,
-        error: errorCb,
-        complete: completeCb
+    app.getUserInfo(function(res){
+        const avtUrl = res.avatarUrl.split('/');
+        const userNum = avtUrl[avtUrl.length-2];
+        const authPwd = util.SHA256(userNum);
+        app.getToken({userNum, authPwd}, function(res) {
+            const uid = userNum;
+            const tokenTime = res.tokenTime ? res.tokenTime : res.data.content.time;
+            const token = res.token ? res.token : res.data.content.token;
+            if(typeof res.token == "undefined"){
+                app.globalData.token = token;
+                app.globalData.uid = userNum;
+                app.globalData.tokenTime = tokenTime;
+            }
+            token && wx.request({
+                url: url,
+                method: 'GET',
+                data: data,
+                header: {uid, token},
+                success: successCb,
+                error: errorCb,
+                complete: completeCb
+            });
+        });
     });
 }
 
-//搜索图书 
-function searchBook(data, successCb, errorCb, completeCb) {
-    request(api.searchBook, data, successCb, errorCb, completeCb);
+function getScenery(id, data, successCb, errorCb, completeCb) {
+    request(api.getScenery, data, successCb, errorCb, completeCb);
 }
-//获取图书详细信息
-function getBookById(id, successCb, errorCb, completeCb) {
-    request(api.getBookById+id, "", successCb, errorCb, completeCb);
+function getResourcesCategory(id, data, successCb, errorCb, completeCb) {
+    request(api.getResourcesCategory, data, successCb, errorCb, completeCb);
 }
-//获取丛书列表
-function getBookList(id, data, successCb, errorCb, completeCb) {
-    request(api.getBookList.replace(':id', id), data, successCb, errorCb, completeCb);
+function getResourcesDetail(id, data, successCb, errorCb, completeCb) {
+    request(api.getResourcesDetail, data, successCb, errorCb, completeCb);
 }
-
-//
-module.exports = { searchBook: searchBook, getBookById: getBookById, getBookList:getBookList}
+function getArticleList(id, data, successCb, errorCb, completeCb) {
+    request(api.getArticleList, data, successCb, errorCb, completeCb);
+}
+function getArticleById(id, successCb, errorCb, completeCb) {
+    request(api.getArticleById, {id}, successCb, errorCb, completeCb);
+}
+function getUsers(id, data, successCb, errorCb, completeCb) {
+    request(api.getUsers, data, successCb, errorCb, completeCb);
+}
+function downloadFile({url, header, success, fail, complete}, onProgressUpdate){
+    const downloadTask = wx.downloadFile({
+        url: api.baseUrl + url,
+        header,
+        success,
+        fail,
+        complete
+    });
+    downloadTask.onProgressUpdate(onProgressUpdate);
+}
+module.exports = {
+    getUsers,
+    getScenery,
+    getResourcesCategory,
+    getResourcesDetail,
+    getArticleList,
+    getArticleById,
+    downloadFile
+};

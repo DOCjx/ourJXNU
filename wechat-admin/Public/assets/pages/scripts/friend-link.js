@@ -1,0 +1,1 @@
+var friendLink=function(){var i=function(){$(".hy-form-modal").on("change","#type",function(){$(this).find("a").hide(),1==$(this).val()?$(".form-group:eq(3)").show():0==$(this).val()?$(".form-group:eq(3)").hide():$(".form-group:eq(3)").hide()})};return{init:function(){i()}}}();

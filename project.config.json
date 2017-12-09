@@ -1,0 +1,59 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.6",
+	"appid": "wxebfa80e6a5f3103a",
+	"projectname": "%E5%B8%88%E5%A4%A7%E5%BE%AE%E5%8A%A9",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "资源详情页",
+					"pathName": "pages/home/pages/resourcesDetail/detail",
+					"query": "navId=1&titleId=23"
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "互助详情页",
+					"pathName": "pages/home/pages/detail/detail",
+					"query": "id=1140896"
+				},
+				{
+					"id": -1,
+					"name": "搜索页",
+					"pathName": "pages/home/pages/search/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布动态",
+					"pathName": "pages/my/my_pages/dongtai/dongtai",
+					"query": ""
+				}
+			]
+		}
+	}
+}

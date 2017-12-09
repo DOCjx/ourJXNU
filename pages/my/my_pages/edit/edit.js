@@ -1,10 +1,10 @@
 // pages/my/my_pages/edit/edit.js
 Page({
   data:{
-    xinxi: ['张三','花生','2015262040**','男',
-            '打球，画画，唱歌打球，画画，唱歌打球，画画，唱歌',
-            '打球，画画，唱歌打球，画画，唱歌打球，画画，唱歌',
-            '打球，画画，唱歌打球，画画，唱歌打球，画画，唱歌dddz画画，唱歌',
+    xinxi: ['张三','稻壳er','201526204070','男',
+            '打球，看球，谈球，玩代码',
+            'believe you can make it,and you will succeed!',
+            '热于助人，热于写代码',
             ]
   },
   onLoad:function(options){
