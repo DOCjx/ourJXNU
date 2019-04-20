@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+.detail-content .container {
+	margin-top: 70px;
+}
+.local-container .location {
+	position: relative;	
+	top: 30px;
+	width: 1170px;
+	margin: auto;
+    height: 37px;
+    border-radius: 4px;
+    border: 1px solid transparent; 
+    line-height: 37px;
+}
+.container .form-title {
+	text-align: center;
+}
+.container .form-info {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.container table th,tr {
+    width: 187px !important;
+	text-align: center;
+}
+td[name="tianbiaoren"] {
+	text-align: left;
+}
+@media(min-width: 800px){
+    
+}
+@media(max-width: 799px){
+   .local-container .location {
+		position: relative;	
+		top: 30px;
+		left: 0;
+		width: 98%;
+	    height: 37px;
+	    border-radius: 4px;
+	    border: 1px solid transparent; 
+	    line-height: 37px;
+	}
+}

@@ -1,0 +1,1 @@
+var Course=function(){var n=function(){$hyall.actionsHandlers.actionPublish=function(n){$.post($.U("ajax?q=publish"),{pk:n.join(",")},function(n){$hyall.dtActionAlert(n)})}},i=function(){$(".hy-form-modal").on("mouseover",".slimScrollDiv",function(){$(this).css({height:"700px"}),$(this).children(".scroller").css({height:"700px"})})};return{init:function(){n(),i()}}}();

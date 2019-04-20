@@ -1,0 +1,564 @@
+﻿@CHARSET "UTF-8";
+/*public css*/
+.help-block{
+    color: #B64141;
+}
+.padding-0 {
+    padding: 0;
+}
+.head-bottom {
+    border-bottom: 5px solid #0254AC;
+    padding: 0 10px 6px 10px;
+}
+.head-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #000;
+}
+#carousel-example-generic{
+    width: 100%;
+}
+.more a{
+    font-size: 12px;
+    color: #fff;
+    background-color: #ffc900;
+    padding: 2px 12px 2px;
+    margin-top: 4px;
+}
+.list{
+    padding: 0 10px 0 0;
+    margin-top: 12px;
+}
+.remember a{
+	float: right;
+}
+.register a{
+	font-size: 16px;
+	color: red;
+}
+.login-box{
+    min-height: 100px;
+}
+.login-box h4{
+    margin: 20px;
+}
+.login-box .countsetting{
+    width: 200px;
+    margin: auto;
+    overflow: auto;
+}
+.btn-orange-xs {
+    background-color: #e8714d;
+    border: 1px solid #eee;
+    font-size: 14px;
+    color: #fff;
+    height: 27px;
+    line-height: 27px;
+    vertical-align: bottom;
+}
+.input-mdl {
+    width: 140px;
+}
+.margin-bt-10 {
+    margin-bottom: 10px;
+}
+.margin-bt-30 {
+    margin-bottom: 30px;
+}
+
+/* Bootstrap fix */
+.login .form-control {
+    border-radius: 0;
+}
+/* page-css */
+@media(min-width: 768px){
+    .carousel-inner {
+        height: 250px;
+        width: 100%;
+    }
+    .carousel-inner .item img{
+        width: 100%;
+
+    }
+    .carousel2{
+        box-sizing: border-box;
+        padding: 0;
+
+    }
+    .recruit-con{
+        padding:0;
+    }
+}
+.main {
+    margin-top: 20px;
+}
+.access-nav {
+    margin-top: 12px;
+    padding: 0 6px;
+}
+.access-nav a {
+    font-size: 15px;
+    color: #333;
+}
+.access-nav li {
+    margin-bottom: 4px;
+    background-color: #eee;
+    height: 24px;
+}
+.access-nav i{
+    font-size: 14px;
+}
+.side-nav-icon {
+    padding: 2px 6px 4px 6px;
+    background-color: #5dade2;
+    color: #fff;
+    margin-right: 10px;
+}
+.access-nav li:nth-child(odd) {
+    background-color: #f7f8fa;
+}
+.access-nav li:nth-child(even) {
+    background-color: #e7e8ea;
+}
+
+.list li {
+    list-style-type: disc;
+    color: #4fc600;
+    margin-left: 26px;
+}
+.list li p {
+    font-size: 14px;
+    color: #000;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #eee;
+}
+.brief {
+    font-size: 12px;
+    color: #8c8c8c;
+    display: block;
+    margin-top: 4px;
+}
+.col-title{
+    margin: 20px 0 5px 10px;
+}
+.news-head span img,
+.login-title span img,
+.link-head span img,
+.access-head span img,
+.col-title span img{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.recruit {
+    min-height: 459px;
+}
+.speech-box {
+    min-height: 250px;
+}
+.recruit-head {
+    border-top: 5px solid #0254AC;
+    border-bottom: 1px solid #bebebe;
+    height: 48px; /* 这里是5+42+1=48 */
+    line-height: 42px;
+    background-color: #f6f6f6;
+}
+.recruit-title {
+    display: inline;
+    border-right: 1px solid #bebebe;
+}
+.recruit-title .on {
+    background-color: #fff;
+    color: #3f3f3f;
+    height: 43px; /* 刚好把底线挡住 */
+}
+.recruit-title a {
+    color: #8f8f8f;
+    text-align: center;
+    border-left: 1px solid #bebebe;
+}
+.recruit-search select {
+    height: 27px;
+}
+@media(min-width: 768px){
+    .recruit-title a {
+        width: 98px;
+    }
+    .news-circle{
+    }
+}
+@media(max-width: 768px){
+   .recruit-title a {
+        padding: 0 10px;
+    }
+}
+.zm-rotation{
+    margin-top: 10px;
+}
+.zm-rotation,
+.zm-rotation li
+.zm-rotation li img {
+    width: 100%;
+    height: 327px!important;
+}
+.clearLeftP{
+    padding-left: 0;
+}
+.recruit-table {
+    font-size: 14px;
+    text-align: center;
+}
+.table th{
+    text-align: center;
+}
+/*.login {
+    margin-top: 30px;
+    background-color: #94c6dd;
+    padding: 6px;
+    font-size: 14px;
+}*/
+.login .login-box {
+    padding: 6px;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 1px #eee;
+    transition: box-shadow 1s ease-in;
+    border-radius: 4px;
+}
+.login .login-box:hover{
+    box-shadow: 1px 3px 3px #c0c0c0;
+}
+.login .login-role input{
+    margin-right: 20px;
+    margin-left: 5px;
+}
+.login .login-box .login-title {
+    font-size: 16px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 6px;
+}
+.login .login-box form {
+    padding: 10px 12px;
+}
+.login .login-box .remember {
+    font-size: 10px;
+}
+/* 让复选框的位置正一点 */
+.login .login-box .inp-checkbox {
+    height: 16px;
+    vertical-align: text-top;
+    margin-top: 0;
+}
+.register p {
+    text-align: center;
+    font-size: 16px;
+}
+.login-btn {
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    background-color: #00b4cd;
+    border: 0;
+    font-weight: 100;
+}
+.link-body {
+    padding: 10px 24px;
+    font-size: 15px;
+}
+.link-body li{
+    list-style: square;
+    padding-bottom: 5px;
+    color: #FFC900;
+}
+#float-box {
+    z-index: 900;
+    position: absolute;
+    background-color: #246DB7;
+    /*max-width: 220px;*/
+    min-width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: tahoma, elvetica, 'Lucida Grande', 'Microsoft YaHei', Arial, sans-serif;
+    border: 3px solid #eee;
+    text-align: center;
+    padding: 0 10px;
+}
+#float-box a {
+    display: block;
+    color: #fff;
+}
+#float-box a p {
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+}
+#float-box .close {
+    font-size: 12px
+}
+@media(max-width: 768px) {
+    #float-box {
+        font-size: 14px;
+        font-weight: 400;
+        height: 80px;
+        line-height: 80px;
+    }
+    #float-box a p {
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+/*
+ljz*/
+.recruit .recruit-table {
+    font-size: 14px;
+
+}
+.recruit .recruit-table-today {
+    font-size: 14px;
+    display: none;
+
+}
+.recruit .recruit-outschool {
+    font-size: 14px;
+    display: none;
+}
+.recruit .recruit-other {
+    font-size: 14px;
+    display: none;
+}
+.recruit .big-recruit {
+    font-size: 14px;
+    display: none;
+}
+.recruit table td{
+    text-align: left;
+    font-size: 14px;
+}
+.recruit table th{
+    text-align: left;
+    font-size: 14px;
+}
+/*  fix the bootstrap  style */
+.bootstrap-select {
+	width: 150px!important;
+}
+
+/*
+Yld*/
+.guidance{
+    display: none;
+}
+.train{
+    display: none;
+}
+
+
+/*
+PSX*/
+@media(min-width: 768px) {
+	.main-relative {
+	    position: relative;
+	}
+	.record-search {
+	    display: none;
+	    position: absolute;
+	    z-index: 100;
+	    width: 456px;
+	    top: 300px;
+	    left: 25.6%;
+	    border-top: 5px solid #0254AC;
+	    background: #f7f8fa;
+	    -webkit-box-shadow: 2px 3px 4px #E9EAD4;
+	    -moz-box-shadow: 2px 3px 4px #E9EAD4;
+	    box-shadow: 2px 4px 4px #E9EAD4;
+	}
+	.record-header {
+	    width: 446px;
+	    margin: 4px 5px;
+	    color: #337ab7;
+	}
+	.record-tip {
+	    margin-left: 6px;
+	}
+	.gl-record {
+	    text-align: center;
+	    font-size: 14px;
+	}
+	.gl-remove {
+	    float: right;
+	    margin-top: 2px;
+	    color: #bebebe;
+	}
+	.gl-remove:hover {
+	    cursor: pointer;
+	    color: #337ab7;
+	}
+	.record-content{
+	    border-top: 1px solid #dedede;
+	}
+	.form-record {
+	    width: 100%;
+	    margin: 7px 0 12px;
+	}
+	.form-record-name {
+	    width: 100% !important;
+	}
+	.form-record-input {
+	    height: 70%;
+	    padding: 3px 8px;
+	    margin-right: 10px;
+	    border-radius: 0;
+	}
+	.btn-record {
+	    padding: 3px 18px 2px;
+	    margin-left: 12%;
+	    border-radius: 0;
+	}
+	.record-list {
+		font-size: 14px;
+	    padding-top: 6px;
+	}
+    .last-list-title {
+        padding-bottom: 10px;
+    }
+	.record-list-info {
+	    padding: 0 12px;
+	    font-size: 15px;
+	    color: #0254AC;
+	}
+	.last-list-top {
+		padding: 4px 12px;
+		border-top: 1px solid #dedede;
+	}
+	.last-list-td {
+		padding-left: 14px;
+	}
+    .last-list-tips {
+        margin:0 4px;
+        padding: 4px 10px;
+        font-size: 14px;
+        color: #31708f;
+        border:1px solid #bce8f1;
+        background: #d9edf7;
+    }
+    /*联想框样式*/
+    .lianxiang {
+        width: 30%!important;
+    }
+    .lianxiang .popover {
+        top: auto;
+        right: 0;
+    }
+    .lianxiang .popover-content > ul {
+        top: 0;
+        left: 0;
+        padding: 0;
+    }
+    .lianxiang .popover-content > ul li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 30px;
+        color: #000;
+        line-height: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .lianxiang .popover-content > ul li:hover{
+        cursor: pointer;
+        background: #f5f5f5;
+    }
+}
+@media(max-width: 768px) {
+	.main-relative {
+	    position: relative;
+	}
+	.record-search {
+		display: none;
+	    position: absolute;
+	    z-index: 100;
+	    width: 97%;
+	    top: 314px;
+	    left: 1.5%;
+	    background: #f7f8fa;
+	    -webkit-box-shadow: 2px 3px 4px #E9EAD4;
+	    -moz-box-shadow: 2px 3px 4px #E9EAD4;
+	    box-shadow: 2px 4px 4px #E9EAD4;
+	}
+	.record-header {
+	    margin: 4px 5px;
+	    color: #337ab7;
+	}
+	.record-tip {
+	    margin-left: 6px;
+	}
+	.gl-record {
+	    text-align: center;
+	    font-size: 14px;
+	}
+	.gl-remove {
+	    float: right;
+	    margin-top: 2px;
+	    color: #bebebe;
+	}
+	.gl-remove:hover {
+	    cursor: pointer;
+	    color: #337ab7;
+	}
+	.record-content{
+	    border-top: 1px solid #dedede;
+	}
+	.form-record {
+	    width: 100%;
+	    margin: 7px 0 12px;
+	}
+	.form-record-name {
+	    width: 100% !important;
+	}
+	.form-record-input {
+	    height: 70%;
+	    padding: 3px 8px;
+	    margin-right: 10px;
+	    border-radius: 0;
+	}
+	.btn-record {
+	    padding: 3px 18px 2px;
+	    margin-left: 12%;
+	    border-radius: 0;
+	}
+	.record-list {
+		font-size: 13px;
+	    padding-top: 6px;
+	}
+    .last-list-title {
+        padding-bottom: 10px;
+    }
+	.record-list-info {
+	    padding: 0 12px;
+	    font-size: 15px;
+	    color: #0254AC;
+	}
+	.last-list-top {
+		padding: 4px 12px;
+		border-top: 1px solid #dedede;
+	}
+	.last-list-td {
+		padding-left: 14px;
+	}
+    .last-list-tips {
+        margin:0 4px;
+        padding: 4px 10px;
+        font-size: 14px;
+        color: #31708f;
+        border:1px solid #bce8f1;
+        background: #d9edf7;
+    }
+}

@@ -1,0 +1,1 @@
+jQuery(function($){$(window).scroll(function(){$(this).scrollTop()>=30?$(".to-top").removeClass("topbtnhide").addClass("topbtnshow"):$(".to-top").removeClass("topbtnshow").addClass("topbtnhide")}),$(".to-top").click(function(){$("body, html").stop().animate({scrollTop:0})})});

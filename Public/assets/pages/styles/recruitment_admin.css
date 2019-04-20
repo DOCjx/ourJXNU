@@ -1,0 +1,99 @@
+/*弹窗大小调整*/
+.slimScrollDiv {
+    height: 420px !important;
+}
+.scroller {
+    height: 420px !important;
+}
+.modal-content {
+    margin-left: 1%;
+    margin-top: -2%;
+}
+.alert-info {
+    margin-right: 8px !important;
+}
+.slimScrollBar {
+    width: 16px !important;
+}
+
+/*滚动条调整*/
+::-webkit-scrollbar {
+    width: 8px;
+} /* 这是针对缺省样式 (必须的) */
+::-webkit-scrollbar-track {
+    background-color: #fff;
+} /* 滚动条的滑轨背景颜色 */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(187, 187, 187);
+} /* 滑块颜色 */
+
+
+/*详情页样式*/
+@media (min-width: 800px) {
+    .top_title {
+        text-align: center;
+        font-size: 24px;
+    }
+    .speech_table {
+        width: 85%;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+    .apply_table .speech_table tr td {
+        height: 40px;
+        border: 1px solid #ccc;
+    }
+    .center {
+        text-align: center;
+    }
+    .right_table {
+        width: 150px;
+    }
+    .content {
+        position: relative;
+        margin: 30px 20px;
+    }
+    .write_name {
+        position: relative;
+        left: 600px;
+    }
+    .article_title {
+        line-height: 35px;
+        color: #E94C1C;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .danweixuqiu {
+        margin: 10px 40px 0 40px;
+    }
+    .txt_no_indent tbody td{
+        font: 14px/1.5 微软雅黑;
+        vertical-align: top;
+    }
+    .zph {
+        margin: 10px 40px 0 40px;
+    }
+    .apply_table {
+        margin: 10px 40px 0 40px;
+    }
+}
+.hy-detail-container {
+    padding-bottom: 20px;
+}
+
+/* fix 申报按钮 */
+.dt-top-actions>a:nth-child(1){
+    color: #fff;
+    background-color: #26344B !important;
+    border-color: #26344B;
+}
+.dt-top-actions>a:nth-child(1) hover{
+	   color: #fff;
+}
+
+.dt-btm-actions>a:nth-child(2){
+	color: #fff;
+    background-color: #26344B !important;
+    border-color: #26344B;
+}
