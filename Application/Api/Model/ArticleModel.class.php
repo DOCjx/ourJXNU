@@ -2,6 +2,38 @@
 namespace Api\Model;
 use Think\Model;
 class ArticleModel extends Model {
+    public function getArticleRank () {
+        $res = $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1),
+                    'article_type'=> array('eq', 2)
+                )
+            )
+            ->order('comment_num desc')
+            ->limit(10)
+            ->select();
+        return $res;
+    }
+    public function searchArticle ($value, $type) {
+        $articleType = $type == 1 ? 1 : 2;
+        $res = $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1),
+                    'article_type'=> array('eq', $articleType),
+                    'content'=> array('like', '%'.$value.'%')
+                )
+            )
+            ->select();
+        return $res;
+    }
+    public function modArticle($article) {
+        $comment_num = $this->where(array('id'=>array('eq', $article['article_id']), 'status'=> array('eq', 1)))->find()['comment_num'];
+        return $this->where(array('id'=>array('eq', $article['article_id']), 'status'=> array('eq', 1)))->save(array(
+            'comment_num' => $comment_num + 1
+        ));
+    }
     public function addArticle($article) {
         if($article['deadline'] == ''){
             unset($article['deadline']);

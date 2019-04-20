@@ -2,114 +2,32 @@
 namespace Api\Model;
 use Think\Model;
 class ResourcesModel extends Model {
+    public function getResourcesRank() {
+        $res = $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1)
+                )
+            )
+            ->order('downloads desc')
+            ->limit(10)
+            ->select();
+        return $res;
+    }
+    public function searchResources ($value) {
+        $res = $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1),
+                    'resource_name'=> array('like', '%'.$value.'%')
+                )
+            )
+            ->select();
+        return $res;
+    }
     public function getResourcesCategory(){
  
-    /*"tags"=> array(
-                  array(
-                      "id"=> 1,
-                      "title"=> "数字逻辑课后习题答案",
-                      "type"=> 2,
-                      'uri'=> '1.ppt'
-                  ),
-                  array(
-                      "id"=> 2,
-                      "title"=> "高数课后习题答案",
-                      "type"=> 1,
-                      'uri'=> '2.doc'
-                  ),
-                  array(
-                      "id"=> 3,
-                      "title"=> "15考研真题",
-                      "type"=> 1,
-                      'uri'=> '3.doc'
-                  ),
-                  array(
-                      "id"=> 4,
-                      "title"=> "马原题库",
-                      "type"=> 3,
-                      'uri'=> '4.xls'
-                  ),
-                  array(
-                      "id"=> 5,
-                      "title"=> "近代史题库",
-                      "type"=> 1,
-                      'uri'=> '5.doc'
-                  ),
-                  array(
-                      "id"=> 6,
-                      "title"=> "马云的说话之道",
-                      "type"=> 4,
-                      'uri'=> '6.pdf'
-                  ),
-                  array(
-                      "id"=> 7,
-                      "title"=> "乔布斯传",
-                      "type"=> 4,
-                      'uri'=> '7.pdf'
-                  ),
-                )*/
-                 //     "navC"=> array(
-            //       array(
-            //           "title"=> "数据结构",
-            //           "titleId"=> 1
-            //       ),
-            //       array(
-            //           "title"=> "c语言",
-            //           "titleId"=> 2
-            //       ),
-            //       array(
-            //           "title"=> "计算机组成原理",
-            //           "titleId"=> 3
-            //       ),
-            //       array(
-            //           "title"=> "计算机网络",
-            //           "titleId"=> 4
-            //       ),
-            //       array(
-            //           "title"=> "数字逻辑",
-            //           "titleId"=> 5
-            //       ),
-            //     )
-            // ),array(
-            //     "nav"=> "公共必修",
-            //     "open"=> false,
-            //     "navId"=> 2,
-            //     "navC"=> array(
-            //         array(
-            //             "title"=> "马克思主义原理",
-            //             "titleId"=> 1
-            //         ),
-            //         array(
-            //             "title"=> "近代史纲要",
-            //             "titleId"=> 2
-            //         ),
-            //         array(
-            //             "title"=> "思想品德与道德修养",
-            //             "titleId"=> 3
-            //         ),
-            //     )
-            // ),array(
-            //     "nav"=> "其它",
-            //     "open"=> false,
-            //     "navId"=> 3,
-            //     "navC"=> array(
-            //         array(
-            //           "title"=> "电子商务",
-            //           "titleId"=> 1
-            //         ),
-            //         array(
-            //           "title"=> "经典心理电影欣赏",
-            //           "titleId"=> 2
-            //         ),
-            //         array(
-            //           "title"=> "野外生存与技巧",
-            //           "titleId"=> 3
-            //         ),
-            //         array(
-            //           "title"=> "西藏旅游与野外生存",
-            //           "titleId"=> 4
-            //         ),
-            //     ) 
+    
         $userid = 1;
         $Model = new  Model();
         $sql = "select type,count('type') from jxnu_downloads_log where user_id=".$userid." GROUP BY type order by count('type') desc";

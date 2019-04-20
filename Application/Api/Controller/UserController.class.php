@@ -2,6 +2,7 @@
 namespace Api\Controller;
 use Think\Controller;
 class UserController extends BaseController {
+    
     public function getUsers(){
         $type = I('get.type');
         $data['status']  = 1;
