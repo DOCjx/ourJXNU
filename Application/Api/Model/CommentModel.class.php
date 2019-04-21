@@ -8,4 +8,10 @@ class CommentModel extends Model {
         $this->create($info);
         return $this->add();
     }
+    public function modComment($comment, $times) {
+        $like = $this->where(array('id'=>array('eq', $comment['article_id']), 'status'=> array('eq', 1)))->find()['like'];
+        return $this->where(array('id'=>array('eq', $comment['article_id']), 'status'=> array('eq', 1)))->save(array(
+            'like' => $like + $times
+        ));
+    }
 }
