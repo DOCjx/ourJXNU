@@ -162,6 +162,9 @@ class ArticleModel extends Model {
             }
           }
         }
+        if($articleType == 2){
+            $getArticle['farCount'] = M('collect')->where(array('status'=>1,'article_id'=>$articleArr['id'],'collect_type'=>1))->count();
+        }
         $getArticle['favorite'] = M('collect') ->where(array('status'=>1,'article_id'=>$articleArr['id'],'user_id'=> I('server.HTTP_UID') ,'collect_type'=>1))->find() ? true : false;
         //var_dump($article['favorite']);
         $getArticle['markers'] = '';
@@ -183,7 +186,6 @@ class ArticleModel extends Model {
     }
     public function getScenery(){
       $sceneryAll = M('article')->where(array('status'=>1,'article_type'=>2))->select();
-      //var_dump($sceneryAll);
       foreach ($sceneryAll as $key => $sceneryArr) {
         $getScenery['id'] = $sceneryArr['id'];
         $getScenery['image'] = '';

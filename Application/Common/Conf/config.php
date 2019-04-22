@@ -118,6 +118,7 @@ return array_merge( $db = array(
 		// 开启路由
 		'URL_ROUTER_ON'   => true,
 		'URL_ROUTE_RULES'=>array(
+		    'College/:action'=> 'Api/College/action',
 		    'Collect/:action'=> 'Api/Collect/action',
 		    'Comment/:action'=> 'Api/Comment/action',
 		    'Article/:action'=> 'Api/Article/action',

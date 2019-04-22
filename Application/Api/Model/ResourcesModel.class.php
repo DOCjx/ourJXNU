@@ -42,7 +42,7 @@ class ResourcesModel extends Model {
           unset($resource[$i]['resource_name']);
           unset($resource[$i]['resource_type']);
        }
-      $arr =M('college')->where(array('status'=>array('eq',1)))->select();
+      $arr = M('college')->where(array('status'=>array('eq',1)))->select();
       foreach ($arr as $k => $v) {
         if($v['id']==$college_id['college_id']||$v['id']==1000||$v['id']==2000){
            foreach($arr as $k1 => $v1){ 

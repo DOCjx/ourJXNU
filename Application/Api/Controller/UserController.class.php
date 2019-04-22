@@ -3,6 +3,13 @@ namespace Api\Controller;
 use Think\Controller;
 class UserController extends BaseController {
     
+    public function modUser(){
+        $userInfo = I('post.');
+
+        $data['status']  = 1;
+        $data['content'] = D('user')->modUser($userInfo);
+        $this->ajaxReturn($data);
+    }
     public function getUsers(){
         $type = I('get.type');
         $data['status']  = 1;
@@ -124,7 +131,7 @@ class UserController extends BaseController {
 
 
         $data['status']  = 1;
-        $data['content'] = $userInfo;
+        $data['content'] = array_merge($userInfo, M('user')->where(array('user_no'=> array('eq', $userInfo['openid'])))->find());
         if($updateUserInfo === 0)  $data['status']  = 0;
         $this->ajaxReturn($data);
     }
