@@ -1,17 +1,7 @@
 <?php
 namespace Api\Model;
 use Think\Model;
-Vendor('QiniuSDK.autoload');  //七牛入口文件引入
-use Qiniu\Auth;
 class ResourcesModel extends Model {
-    public function getUploadToken() {
-        $accessKey = 'oRjO5qMHsINS0VxbPlIIUG4tG_pb2pMT2kHqVPBP';
-        $secretKey = 'azAtpSRNfj69HdKtJURyGGGd7epDG2EE_1TIOIjy';
-        $bucket = 'docdoc';
-        $auth = new Auth($accessKey, $secretKey);
-        $token = $auth->uploadToken($bucket);
-        return $token;
-    }
     public function getResourcesRank() {
         $res = $this
             ->where(

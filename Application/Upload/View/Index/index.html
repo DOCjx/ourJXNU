@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>上传文件</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+	<style type="text/css">
+		.submit{
+			background-color: #00b4cd;
+		}
+		.slider-content{
+			display: flex;
+		}
+		#slider-value{
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body class="container-fluid">
+	<div>
+		<div class="form-group">
+		  <label for="exampleFormControlSelect1">科目：</label>
+		  <select class="form-control" id="category_id">
+		  	<volist name="options" id="vo">
+		    	<option name="{$vo.id}" value="{$vo.id}">{$vo.name}</option>
+			</volist>
+		  </select>
+		</div>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">文件名：</label>
+		  <input type="email" class="form-control" id="resource_name">
+		</div>
+		<div class="form-group">
+		  	<label for="exampleFormControlFile1">文件：</label>
+    		<input type="file" class="form-control-file" id="file">
+		</div>
+		<div class="form-group">
+		    <label for="formControlRange">价值：</label>
+		    <div class="slider-content">
+			    <input type="range" class="form-control-range" step="1" min="5" max="20" value="0" id="value">
+			    <span id="slider-value">0</span>
+			</div>
+		</div>
+		<button type="submit" id="pickfiles" class="btn mb-2 submit">发布</button>
+	</div>
+	<script type="text/javascript">
+		$('#value').change(function() {
+			$('#slider-value').text($(this).val());
+		});
+		$('.submit').on('click', () => {
+			function uploadURLFromRegionCode(code) {
+			    var uploadURL = null;
+			    switch(code) {
+			        case 'ECN': uploadURL = 'https://up.qiniup.com'; break;
+			        case 'NCN': uploadURL = 'https://up-z1.qiniup.com'; break;
+			        case 'SCN': uploadURL = 'https://up-z2.qiniup.com'; break;
+			        case 'NA': uploadURL = 'https://up-na0.qiniup.com'; break;
+			        case 'ASG': uploadURL = 'https://up-as0.qiniup.com'; break;
+			        default: console.error('please make the region is with one of [ECN, SCN, NCN, NA, ASG]');
+			    }
+			    return uploadURL;
+			}
+			//普通上传
+	        var Qiniu_upload = function(f, token, region, key) {
+	            var xhr = new XMLHttpRequest();
+	            xhr.open('POST', uploadURLFromRegionCode(region), true);
+	            var formData, startDate;
+	            formData = new FormData();
+	            if (key !== null && key !== undefined) formData.append('key', key);
+	            formData.append('token', token);
+	            formData.append('file', f);
+	            var taking;
+	 
+	            xhr.onreadystatechange = function(response) {
+	                if (xhr.readyState == 4 && xhr.status == 200 && xhr.responseText != "") {
+	                    var blkRet = JSON.parse(xhr.responseText);
+	                    console.log(blkRet)
+	                } else if (xhr.status != 200 && xhr.responseText) {
+	 					console.log(response)
+	                }
+	            };
+	            xhr.send(formData);
+	        };
+	        var token = '{$uploadToken}';
+	        if ($("#file")[0].files.length > 0 && token != "") {
+	        	var file = $("#file")[0].files[0];
+	        	console.log(file)
+	        	var key = parseInt(Math.random() * 10000) + '----' + '{$uid}';
+	            Qiniu_upload(file, token, 'ECN', key);
+	        } else {
+	            console && console.log("form input error");
+	        }
+	    })
+	</script>
+</body>
+</html>

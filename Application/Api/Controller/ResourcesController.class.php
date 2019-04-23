@@ -1,8 +1,6 @@
 <?php
 namespace Api\Controller;
 use Think\Controller;
-Vendor('QiniuSDK.autoload');  //七牛入口文件引入
-use Qiniu\Auth;
 
 class ResourcesController extends BaseController {
     public function getResourcesCategory(){
@@ -28,14 +26,9 @@ class ResourcesController extends BaseController {
          $this->ajaxReturn($data);
     }
     public function getUploadToken(){
-        $accessKey = 'oRjO5qMHsINS0VxbPlIIUG4tG_pb2pMT2kHqVPBP';
-        $secretKey = 'azAtpSRNfj69HdKtJURyGGGd7epDG2EE_1TIOIjy';
-        $bucket = 'docdoc';
-        $auth = new Auth($accessKey, $secretKey);
-        $token = $auth->uploadToken($bucket);
         
         $data['status']  = 1;
-        $data['content'] = $token;
+        $data['content'] = D('resources')->getUploadToken();
         $this->ajaxReturn($data);
     }
 }
