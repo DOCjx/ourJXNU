@@ -4,7 +4,6 @@ use Think\Controller;
 
 class ResourcesController extends BaseController {
     public function getResourcesCategory(){
-        $type = I('get.type');
         $data['status']  = 1;
         $data['content'] = D('resources')->getResourcesCategory();
         $this->ajaxReturn($data);
@@ -26,9 +25,14 @@ class ResourcesController extends BaseController {
          $this->ajaxReturn($data);
     }
     public function getUploadToken(){
-        
         $data['status']  = 1;
         $data['content'] = D('resources')->getUploadToken();
+        $this->ajaxReturn($data);
+    }
+    public function addResource() {
+        $resource = I('post.');
+        $data['status']  = 1;
+        $data['content'] = D('resources')->addResource($resource);
         $this->ajaxReturn($data);
     }
 }

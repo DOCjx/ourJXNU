@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>上传文件</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="__PUBLIC__/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -19,21 +20,35 @@
 		#slider-value{
 			margin-left: 10px;
 		}
+		.content{
+			margin-top: 10px;
+		}
+		#mes{
+			text-align: center;
+		}
+		@-webkit-keyframes circle{
+            0%{ transform:rotate(0deg); }
+            100%{ transform:rotate(360deg); }
+        }
+		.loading {
+			display: inline-block;
+		  	animation: circle 1s infinite linear ;
+		}
 	</style>
 </head>
 <body class="container-fluid">
-	<div>
+	<div class="content">
 		<div class="form-group">
 		  <label for="exampleFormControlSelect1">科目：</label>
 		  <select class="form-control" id="category_id">
 		  	<volist name="options" id="vo">
-		    	<option name="{$vo.id}" value="{$vo.id}">{$vo.name}</option>
+		    	<option name="{$vo.name}" value="{$vo.id}">{$vo.name}</option>
 			</volist>
 		  </select>
 		</div>
 		<div class="form-group">
 		  <label for="exampleFormControlInput1">文件名：</label>
-		  <input type="email" class="form-control" id="resource_name">
+		  <input type="email" class="form-control" id="resource_name" placeholder="默认原文件名">
 		</div>
 		<div class="form-group">
 		  	<label for="exampleFormControlFile1">文件：</label>
@@ -43,12 +58,26 @@
 		    <label for="formControlRange">价值：</label>
 		    <div class="slider-content">
 			    <input type="range" class="form-control-range" step="1" min="5" max="20" value="0" id="value">
-			    <span id="slider-value">0</span>
+			    <span id="slider-value">5</span>
 			</div>
 		</div>
-		<button type="submit" id="pickfiles" class="btn mb-2 submit">发布</button>
+		<button type="submit" id="pickfiles" class="btn mb-2 submit">
+			<i class="icon-reload loading"></i>
+			发布
+		</button>
+	</div>
+	<div id="mes" class="alert alert-danger" role="alert">
 	</div>
 	<script type="text/javascript">
+		$('.content').hide();
+		$('#mes').text('环境异常');
+		wx.miniProgram.getEnv(function (res) {
+		  	if(res.miniprogram){
+		  		$('.content').show();
+		  		$('#mes').hide();
+		  		$('.loading').hide();
+		  	}
+		});
 		$('#value').change(function() {
 			$('#slider-value').text($(this).val());
 		});
@@ -66,7 +95,7 @@
 			    return uploadURL;
 			}
 			//普通上传
-	        var Qiniu_upload = function(f, token, region, key) {
+	        var Qiniu_upload = function(f, token, region, key, cb) {
 	            var xhr = new XMLHttpRequest();
 	            xhr.open('POST', uploadURLFromRegionCode(region), true);
 	            var formData, startDate;
@@ -79,19 +108,44 @@
 	            xhr.onreadystatechange = function(response) {
 	                if (xhr.readyState == 4 && xhr.status == 200 && xhr.responseText != "") {
 	                    var blkRet = JSON.parse(xhr.responseText);
-	                    console.log(blkRet)
+	                    cb(blkRet);
 	                } else if (xhr.status != 200 && xhr.responseText) {
 	 					console.log(response)
 	                }
 	            };
 	            xhr.send(formData);
 	        };
+	        var category_id = $('#category_id').val();
+			var resource_name = $('#resource_name').val().trim();
+			var value = $('#value').val();
+			var files = $("#file")[0].files
 	        var token = '{$uploadToken}';
-	        if ($("#file")[0].files.length > 0 && token != "") {
-	        	var file = $("#file")[0].files[0];
-	        	console.log(file)
-	        	var key = parseInt(Math.random() * 10000) + '----' + '{$uid}';
-	            Qiniu_upload(file, token, 'ECN', key);
+	        var regx = /doc|docx|ppt|pptx|xls|xlsx|pdf/;
+	        if(
+	        	!category_id
+				|| !value
+				|| files.length == 0
+			) {
+	        	$('#mes').show();
+	        	$('#mes').text('请将内容填写完整~');
+	        	return;
+	        }
+	        var file = files[0];
+	        if(!regx.test(file.name)){
+	        	$('#mes').show();
+	        	$('#mes').text('请上传doc|docx|ppt|pptx|xls|xlsx|pdf格式的文档');
+	        	return;
+	        }
+	        if (token != "") {
+	        	var key = '{$uid}' + '_' + parseInt(Math.random() * 1000000) + '_' + file.name;
+	        	$('.loading').show();
+	            Qiniu_upload(file, token, 'ECN', key, (blkret) => {
+	    			wx.miniProgram.navigateBack({
+					  delta: 1
+					});
+					wx.miniProgram.postMessage({data: {college_id: category_id, resource_name: resource_name || file.name, value, uri: key}});
+					
+	            });
 	        } else {
 	            console && console.log("form input error");
 	        }
