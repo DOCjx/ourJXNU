@@ -4,6 +4,7 @@ use Think\Model;
 class CollectModel extends Model {
     public function addCollect($data) {
     	$info = $data;
+    	$info['create_time'] =  date("Y-m-d H:i:s", time());
         $this->create($info);
         return $this->add();
     }
@@ -18,5 +19,15 @@ class CollectModel extends Model {
         )->save(array(
             'status' => $likeStatus == "0" ? 1 : 0
         ));
+    }
+    public function getAllCollect(){
+    	return $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1)
+                )
+            )
+            ->order('create_time desc')
+            ->select();;
     }
 }

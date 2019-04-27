@@ -89,4 +89,44 @@ class BaseController extends Controller {
         }
         $this->ajaxReturn($data);
     }
+    public function getMsg() {
+        $uid = I('server.HTTP_UID');
+        $lastMsgTime = (int)D('user')->getUser($uid)['admission_time'];
+        // $modUserTime = D('user')->modUser($uid, array('admission_time'=> time()));
+        $comments = D('comment')->getCommentMsg();
+        $articles = D('article')->getAllArticle();
+        $collects = D('collect')->getAllCollect();
+        $data['status']  = 1;
+        $res = array();
+        $res['help'] = array();
+        $res['scenery'] = array();
+
+        foreach ($comments as $key => $comment) {
+            foreach ($articles as $articleKey => $article) {
+                if(
+                    $article['article_type'] == 1
+                    && $comment['article_id'] == $article['id'] 
+                    && $article['user_id'] == $uid 
+                    && strtotime($comment['create_time']) > $lastMsgTime
+                ){
+                    $res['help'][] = $comment;
+                }
+            }
+        }
+        foreach ($collects as $key => $collect) {
+            foreach ($articles as $articleKey => $article) {
+                if(
+                    $article['article_type'] == 2
+                    && $collect['article_id'] == $article['id'] 
+                    && $article['user_id'] == $uid 
+                    && strtotime($collect['create_time']) > $lastMsgTime
+                ){
+                    $res['scenery'][] = $collect;
+                }
+            }
+        }
+        $res['score'] = D('score_log')->getScoreLog(strtotime($lastMsgTime));
+        $data['content'] = $res;
+        $this->ajaxReturn($data);
+    }
 }

@@ -83,7 +83,7 @@ class ResourcesModel extends Model {
                 'navC'=>$arr1[$i]['navC'],
             );
         }
-        $likeTags = M('resources')->where(array('category_id'=>$college_id['college_id']))->field('id,uri,resource_name,resource_type')->order('downloads desc')->limit(5)->select();
+        $likeTags = M('resources')->where(array('category_id'=>$college_id['college_id']))->order('downloads desc')->limit(5)->select();
         $resourcesCategory1 =  array(
             "nav"=> '猜你喜欢',
             "navId"=> '0',
@@ -116,88 +116,6 @@ class ResourcesModel extends Model {
             "titleId"=>$titleId,
             'detail'=>$resource
       );
-
-      
-     
-     
-      // for($i=0;$i<count($resource);$i++){
-      //   $resourcesDetails[$i]=
-      //   array(  
-      //       "navId"=>$navId,
-      //       "titleId"=>$titleId,
-      //       "detail"=>array(
-      //         array(    
-      //         'id'=>$resource[$i]['id'],
-      //         "title"=>$resource[$i]['resource_name'],
-      //         "fav"=>$resource[$i]['fav'],
-      //         "userId"=>$user_id,
-      //         "type"=>$resource[$i]['resource_type']
-      //         )
-          
-      //       )
-      //     );
-      // }
-   
-        // $resourcesDetails = array(
-        //     array(
-        //         "navId"=>1,
-        //         "titleId"=>23,
-        //         "detail"=>array(
-        //             array(
-        //                 "id"=>1,
-        //                 "title"=>"数据结构15级试卷A",
-        //                 "fav"=>false,
-        //                 "userId"=>1,
-        //                 "type"=>1
-        //             ),array(
-        //                 "id"=>2,
-        //                 "title"=>"数据结构15级试卷B",
-        //                 "fav"=>true,
-        //                 "userId"=>2,
-        //                 "type"=>4
-        //             )
-        //         )
-        //     ),
-        //     array(
-        //         "navId"=>1,
-        //         "titleId"=>3,
-        //         "detail"=>array(
-        //             array(
-        //                 "id"=>1,
-        //                 "title"=>"计算机组成原理实验仪器介绍及实验报告",
-        //                 "fav"=>false,
-        //                 "userId"=>3,
-        //                 "type"=>1
-        //             )
-        //         )
-        //     ),
-        //     array(
-        //         "navId"=>1,
-        //         "titleId"=>4,
-        //         "detail"=>array(
-        //             array(
-        //                 "id"=>1,
-        //                 "title"=>"计算机网络数据统计",
-        //                 "fav"=>true,
-        //                 "userId"=>4,
-        //                 "type"=>3
-        //             )
-        //         )
-        //     ),
-        //     array(
-        //         "navId"=>1,
-        //         "titleId"=>2,
-        //         "detail"=>array(
-        //             array(
-        //                 "id"=>1,
-        //                 "title"=>"c语言从入门到放弃",
-        //                 "fav"=>false,
-        //                 "userId"=>5,
-        //                 "type"=>4
-        //             )
-        //         )
-        //     )
-        // );
     
       return array($resourcesDetails);
     }

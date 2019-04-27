@@ -2,6 +2,15 @@
 namespace Api\Model;
 use Think\Model;
 class ArticleModel extends Model {
+    public function getAllArticle() {
+        return  $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1)
+                )
+            )
+            ->select();;
+    }
     public function getArticleRank () {
         $res = $this
             ->where(
@@ -146,7 +155,7 @@ class ArticleModel extends Model {
             $getArticle['price'] = $articleArr['value'];
             $commentAll = M('comment') ->where(array('status'=>1,'article_id'=>$articleArr['id']))->order('create_time desc')->select();
             //var_dump($articleArr['id'].'11');
-            $getArticle['tags']='';
+            $getArticle['tags']=array();
             foreach ($commentAll as $key => $commentArr) {
               // $commentFarCount = M('collect')->where(array('status'=>1,'article_id'=>$commentArr['id'],'collect_type'=>2))->count();
               $commentUser = M('user')->where(array('status'=>1,'user_no'=>$commentArr['user_id']))->find();

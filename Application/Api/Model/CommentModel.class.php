@@ -14,4 +14,19 @@ class CommentModel extends Model {
             'like' => $like + $times
         ));
     }
+    public function pickComment($id) {
+        return $this->where(array('id'=>array('eq', $id), 'status'=> array('eq', 1)))->save(array(
+            'checked' => 1
+        ));
+    }
+    public function getCommentMsg(){
+    	return $this
+            ->where(
+                array(
+                    'status'=> array('eq', 1)
+                )
+            )
+            ->order('create_time desc')
+            ->select();;
+    }
 }

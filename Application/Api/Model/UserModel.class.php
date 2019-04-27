@@ -2,13 +2,18 @@
 namespace Api\Model;
 use Think\Model;
 class UserModel extends Model {
-    public function modUser($user){
+    public function modUser($uid, $user){
+        $user_no = $uid;
         $info = $user;
-        $uid = I('server.HTTP_UID');
-        return $this->where(array('user_no'=>array('eq', $uid), 'status'=> array('eq', 1)))->save($info);
+        return $this->where(array('user_no'=>array('eq', $user_no), 'status'=> array('eq', 1)))->save($info);
     }
     public function getUsers(){
         $users = $this->where(array('status'=> array('eq', 1)))->select();
+        return $users;
+    }
+
+    public function getUser($user_no){
+        $users = $this->where(array('user_no'=> array('eq', $user_no)))->find();
         return $users;
     }
     public function searchUsers($value){

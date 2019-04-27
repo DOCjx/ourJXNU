@@ -5,9 +5,41 @@ class UserController extends BaseController {
     
     public function modUser(){
         $userInfo = I('post.');
+        $uid = I('server.HTTP_UID');
 
         $data['status']  = 1;
-        $data['content'] = D('user')->modUser($userInfo);
+        $data['content'] = D('user')->modUser($uid, $userInfo);
+        $this->ajaxReturn($data);
+    }
+    public function modScore(){
+        $user_id = I('post.id');
+        $score = I('post.score');
+        $comment_id = I('post.comment_id');
+        $uid = I('server.HTTP_UID');
+
+        $addScore = (int)D('user')->getUser($user_id)['score'] + $score;
+        $subScore = (int)D('user')->getUser($uid)['score'] - $score;
+
+        $modAdd = D('user')->modUser($user_id, array('score' => $addScore));
+        $modSub = D('user')->modUser($uid, array('score' => $subScore));
+
+        $logTime = date("Y-m-d H:i:s", time());
+        $scoreLogType = 1;
+        if($comment_id){
+            $pickComment = D('comment')->pickComment($comment_id);
+            $scoreLogType = 2;
+        }
+
+        $scoreLog[] = array('src_user_id'=> $user_id, 'user_id'=> $uid, 'type'=> $scoreLogType, 'value'=> $score, 'create_time'=> $logTime, 'blong' => 1);
+        $scoreLog[] = array('src_user_id'=> $uid, 'user_id'=> $user_id, 'type'=> $scoreLogType, 'value'=> $score, 'create_time'=> $logTime, 'blong' => 2);
+        $addScoreLog = D('score_log')->addScoreLog($scoreLog);
+
+ 
+        $data['status']  = 1;
+        $data['content'] = $modAdd
+            && $modSub
+            && $comment_id ? $pickComment : true
+            && $addScoreLog;
         $this->ajaxReturn($data);
     }
     public function getUsers(){
