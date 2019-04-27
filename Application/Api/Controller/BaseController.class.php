@@ -92,7 +92,7 @@ class BaseController extends Controller {
     public function getMsg() {
         $uid = I('server.HTTP_UID');
         $lastMsgTime = (int)D('user')->getUser($uid)['admission_time'];
-        // $modUserTime = D('user')->modUser($uid, array('admission_time'=> time()));
+        $modUserTime = D('user')->modUser($uid, array('admission_time'=> time()));
         $comments = D('comment')->getCommentMsg();
         $articles = D('article')->getAllArticle();
         $collects = D('collect')->getAllCollect();
@@ -125,7 +125,7 @@ class BaseController extends Controller {
                 }
             }
         }
-        $res['score'] = D('score_log')->getScoreLog(strtotime($lastMsgTime));
+        $res['score'] = D('score_log')->getScoreLog(date("Y-m-d H:i:s", $lastMsgTime));
         $data['content'] = $res;
         $this->ajaxReturn($data);
     }
