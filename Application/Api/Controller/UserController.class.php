@@ -11,6 +11,20 @@ class UserController extends BaseController {
         $data['content'] = D('user')->modUser($uid, $userInfo);
         $this->ajaxReturn($data);
     }
+    public function checkPass() {
+        $users = I('post.');
+
+        $data['status']  = 1;
+        $data['content'] = D('user')->checkPass($users);
+        $this->ajaxReturn($data);
+    }
+    public function checkRoles() {
+        $users = I('post.');
+
+        $data['status']  = 1;
+        $data['content'] = D('user')->checkRoles($users);
+        $this->ajaxReturn($data);
+    }
     public function modScore(){
         $user_id = I('post.id');
         $score = I('post.score');
@@ -42,10 +56,26 @@ class UserController extends BaseController {
             && $addScoreLog;
         $this->ajaxReturn($data);
     }
+    public function searchUserByStudentNo(){
+        $student_no = I('get.student_no');
+        $data['status']  = 1;
+        $data['content'] = D('user')->searchUserByStudentNo($student_no);
+        $this->ajaxReturn($data);
+    }
     public function getUsers(){
         $type = I('get.type');
         $data['status']  = 1;
         $data['content'] = D('user')->getUsers();
+        $this->ajaxReturn($data);
+    }
+    public function getAuthUser(){
+        $data['status']  = 1;
+        $data['content'] = D('user')->getAuthUser();
+        $this->ajaxReturn($data);
+    }
+    public function getAdminUser(){
+        $data['status']  = 1;
+        $data['content'] = D('user')->getAdminUser();
         $this->ajaxReturn($data);
     }
     public function getToken(){
