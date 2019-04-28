@@ -45,7 +45,7 @@ class ArticleModel extends Model {
     }
     public function addArticle($article) {
         if($article['deadline'] == ''){
-            unset($article['deadline']);
+            $article['deadline'] = date("Y-m-d H:i:s", time());
         }
         $articleAdd = $this->add($article);
         $position['latitude'] = $article['latitude'];
@@ -194,7 +194,7 @@ class ArticleModel extends Model {
         return $articleDetail;
     }
     public function getScenery(){
-      $sceneryAll = M('article')->where(array('status'=>1,'article_type'=>2))->select();
+      $sceneryAll = M('article')->where(array('status'=>1,'article_type'=>2))->order('deadline desc')->select();
       foreach ($sceneryAll as $key => $sceneryArr) {
         $getScenery['id'] = $sceneryArr['id'];
         $getScenery['image'] = '';

@@ -17,7 +17,8 @@ class CollectModel extends Model {
         		'collect_type'=>array('eq', $info['collect_type'])
         	)
         )->save(array(
-            'status' => $likeStatus == "0" ? 1 : 0
+            'status' => $likeStatus == "0" ? 1 : 0,
+            'create_time'=> date("Y-m-d H:i:s", time())
         ));
     }
     public function getAllCollect(){
