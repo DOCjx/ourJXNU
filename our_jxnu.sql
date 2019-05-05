@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50615
 File Encoding         : 65001
 
-Date: 2019-04-20 08:05:13
+Date: 2019-05-05 12:32:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,56 +30,41 @@ CREATE TABLE `jxnu_article` (
   `file_id` varchar(255) DEFAULT NULL,
   `status` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jxnu_article
 -- ----------------------------
-INSERT INTO `jxnu_article` VALUES ('5', '1', '校医院毕业生体检，一位同学遗失身份证，请若有人认识请告知失主。', '223', '2019-03-24 22:22:00', '17', '1', 'http://localwechatstatic.wvwvw.cn/psb.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('6', '5', '在这个位置遗失了一个小包包，对我意义重大，请好心人联系我。18334205426', '354', '2019-03-24 22:22:00', '50', '1', 'http://localwechatstatic.wvwvw.cn/5.JPG', '1');
-INSERT INTO `jxnu_article` VALUES ('7', '8', '哪位小姐姐可以帮忙带一杯奶茶吗？地点右下角，s230', '264', '2019-03-24 22:22:00', '14', '1', 'http://localwechatstatic.wvwvw.cn/1.JPG', '1');
-INSERT INTO `jxnu_article` VALUES ('8', '12', '最近好难过怎么办呀。。。。', '394', '2019-03-24 22:22:00', '18', '1', null, '1');
-INSERT INTO `jxnu_article` VALUES ('9', '15', '哪个小姐姐画得不错，求联系方式', '269', '2019-03-24 22:22:00', '14', '1', 'http://localwechatstatic.wvwvw.cn/2.JPG', '1');
-INSERT INTO `jxnu_article` VALUES ('10', '19', '英语改革大家有什么好的计划吗？', '266', '2019-03-24 22:22:00', '14', '1', null, '1');
-INSERT INTO `jxnu_article` VALUES ('11', '22', '跳舞的黑衣服女生求介绍', '251', '2019-03-24 22:22:00', '20', '1', 'http://localwechatstatic.wvwvw.cn/3.JPG', '1');
-INSERT INTO `jxnu_article` VALUES ('12', '24', '谁可以帮我复习高数吗', '231', '2019-03-24 22:22:00', '30', '1', null, '1');
-INSERT INTO `jxnu_article` VALUES ('13', '26', '谁有《阿弥陀佛，么么哒》吗？咱们换着看', '252', '2019-03-24 22:22:00', '13', '1', 'http://localwechatstatic.wvwvw.cn/6.JPG', '1');
-INSERT INTO `jxnu_article` VALUES ('14', '123123', '夜里太烦，不知不觉走到了正大坊,以前都是匆匆经过，从没注意到它，现在的正大坊这么安静这么祥和', '23', '2017-11-26 18:15:31', null, '2', 'http://localwechatstatic.wvwvw.cn/IMG_20151211_204535.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('15', '123123', '大学这么几年经常听到镜湖的天鹅被塑料袋缠住了嘴，为啥它们那么喜欢吃塑料呢，，，，', '52', '2017-11-26 18:18:07', null, '2', 'http://localwechatstatic.wvwvw.cn/IMG_20151130_172030.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('16', '123123', '来到师大很意外的是，我们学校居然有小鹿', '62', null, null, '2', 'http://localwechatstatic.wvwvw.cn/IMG_20150913_065449.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('29', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'sfda', '0', '2019-02-25 01:02:00', '13', '1', 'http://localwechatstatic.wvwvw.cn/wxebfa80e6a5f3103a.o6zAJs_dBnVMZFl7xP0AnWMuA66k.3d2E6F6tGp8jf034b9523c8b993f826597341a1f8eb2.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('30', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'sdfa', '0', '2019-03-24 22:22:00', '20', '1', '', '1');
-INSERT INTO `jxnu_article` VALUES ('31', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '好无聊哈，，，，有小婕姐聊聊天吗？', '0', '2019-02-24 20:55:00', '20', '1', 'http://localwechatstatic.wvwvw.cn/tmp_152e981ddbed880706ad0b1bb8e397a103758bc1d2da99cc.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('32', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '哦哦哦', '0', '2019-02-24 21:03:00', '15', '1', 'http://localwechatstatic.wvwvw.cn/tmp_873e3db966b5675c714be3112e05b95541998e96fa2b5824.jpg', '1');
-INSERT INTO `jxnu_article` VALUES ('33', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '哈哈哈唉D', '0', '2019-02-25 20:03:00', '5', '1', '', '1');
-INSERT INTO `jxnu_article` VALUES ('34', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '还比比吧', '0', '2019-02-25 21:07:00', '5', '1', '', '1');
-INSERT INTO `jxnu_article` VALUES ('35', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '高渐离离婚了', '0', '2019-02-26 22:10:00', '5', '1', '', '1');
-INSERT INTO `jxnu_article` VALUES ('37', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'beijin', '0', null, '5', '2', 'http://localwechatstatic.wvwvw.cn/wxebfa80e6a5f3103a.o6zAJs_dBnVMZFl7xP0AnWMuA66k.jPe8dKwEvsele8b55947dbad1e79c69c0b605b60e339.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('5', '1', '校医院毕业生体检，一位同学遗失身份证，请若有人认识请告知失主。', '6', '2019-05-13 11:01:00', '17', '1', 'http://localwechatstatic.wvwvw.cn/psb.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('6', '5', '在这个位置遗失了一个小包包，对我意义重大，请好心人联系我。18334205426', '3', '2019-05-13 11:01:00', '50', '1', 'http://localwechatstatic.wvwvw.cn/5.JPG', '1');
+INSERT INTO `jxnu_article` VALUES ('7', '8', '哪位小姐姐可以帮忙带一杯奶茶吗？地点右下角，s230', '3', '2019-05-13 11:01:00', '14', '1', 'http://localwechatstatic.wvwvw.cn/1.JPG', '1');
+INSERT INTO `jxnu_article` VALUES ('8', '12', '最近好难过怎么办呀。。。。', '2', '2019-05-13 11:01:00', '18', '1', null, '1');
+INSERT INTO `jxnu_article` VALUES ('9', '15', '哪个小姐姐画得不错，求联系方式', '3', '2019-05-13 11:01:00', '14', '1', 'http://localwechatstatic.wvwvw.cn/2.JPG', '1');
+INSERT INTO `jxnu_article` VALUES ('10', '19', '英语改革大家有什么好的计划吗？', '3', '2019-05-13 11:01:00', '14', '1', null, '1');
+INSERT INTO `jxnu_article` VALUES ('11', '22', '跳舞的黑衣服女生求介绍', '251', '2019-05-13 11:01:00', '1', '1', 'http://localwechatstatic.wvwvw.cn/3.JPG', '1');
+INSERT INTO `jxnu_article` VALUES ('12', '24', '谁可以帮我复习高数吗', '231', '2019-05-13 11:01:00', '1', '1', null, '1');
+INSERT INTO `jxnu_article` VALUES ('13', '26', '谁有《阿弥陀佛，么么哒》吗？咱们换着看', '252', '2019-05-13 11:01:00', '2', '1', 'http://localwechatstatic.wvwvw.cn/6.JPG', '1');
+INSERT INTO `jxnu_article` VALUES ('14', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '夜里太烦，不知不觉走到了正大坊,以前都是匆匆经过，从没注意到它，现在的正大坊这么安静这么祥和', '23', '2017-11-26 18:15:31', null, '2', 'http://localwechatstatic.wvwvw.cn/IMG_20151211_204535.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('15', '22', '大学这么几年经常听到镜湖的天鹅被塑料袋缠住了嘴，为啥它们那么喜欢吃塑料呢，，，，', '52', '2017-11-26 18:18:07', null, '2', 'http://localwechatstatic.wvwvw.cn/IMG_20151130_172030.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('16', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '来到师大很意外的是，我们学校居然有小鹿', '62', '2017-11-26 18:15:31', null, '2', 'http://localwechatstatic.wvwvw.cn/IMG_20150913_065449.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('29', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'sfda', '5', '2019-05-13 11:01:00', '13', '1', 'http://localwechatstatic.wvwvw.cn/wxebfa80e6a5f3103a.o6zAJs_dBnVMZFl7xP0AnWMuA66k.3d2E6F6tGp8jf034b9523c8b993f826597341a1f8eb2.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('30', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'sdfa', '0', '2019-05-13 11:01:00', '20', '1', '', '1');
+INSERT INTO `jxnu_article` VALUES ('31', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '好无聊哈，，，，有小婕姐聊聊天吗？', '0', '2019-05-13 11:01:00', '20', '1', 'http://localwechatstatic.wvwvw.cn/tmp_152e981ddbed880706ad0b1bb8e397a103758bc1d2da99cc.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('32', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '哦哦哦', '0', '2019-05-13 11:01:00', '15', '1', 'http://localwechatstatic.wvwvw.cn/tmp_873e3db966b5675c714be3112e05b95541998e96fa2b5824.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('33', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '哈哈哈唉D', '0', '2019-05-13 11:01:00', '5', '1', '', '1');
+INSERT INTO `jxnu_article` VALUES ('34', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '还比比吧', '0', '2019-05-13 11:01:00', '5', '1', '', '1');
+INSERT INTO `jxnu_article` VALUES ('35', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '高渐离离婚了', '0', '2019-05-13 11:01:00', '5', '1', '', '1');
+INSERT INTO `jxnu_article` VALUES ('37', '22', 'beijin', '0', '2017-11-26 18:15:31', '5', '2', 'http://localwechatstatic.wvwvw.cn/wxebfa80e6a5f3103a.o6zAJs_dBnVMZFl7xP0AnWMuA66k.jPe8dKwEvsele8b55947dbad1e79c69c0b605b60e339.jpg', '1');
 INSERT INTO `jxnu_article` VALUES ('38', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'h很好', '0', '2019-04-14 01:01:00', '11', '1', 'http://localwechatstatic.wvwvw.cn/wxebfa80e6a5f3103a.o6zAJs_dBnVMZFl7xP0AnWMuA66k.S4ULMmmEE3zs2ea97f35012ff5939eaf062363f77694.jpg', '1');
 INSERT INTO `jxnu_article` VALUES ('39', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '很棒', '0', '2019-04-13 12:20:00', '13', '1', 'http://localwechatstatic.wvwvw.cn/tmp_25f89de9f577709f57f7cc11863ba8597594d361cc754ff3.jpg', '1');
 INSERT INTO `jxnu_article` VALUES ('40', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '刚刚', '0', '2019-04-13 11:03:00', '5', '1', '', '1');
 INSERT INTO `jxnu_article` VALUES ('41', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '日期', '0', '2019-05-13 11:01:00', '5', '1', 'http://localwechatstatic.wvwvw.cn/tmp_2a45ff26dafe4cd97c0078d8892899ac391f50310f311097.jpg', '1');
-
--- ----------------------------
--- Table structure for jxnu_category
--- ----------------------------
-DROP TABLE IF EXISTS `jxnu_category`;
-CREATE TABLE `jxnu_category` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `pid` int(10) DEFAULT '0',
-  `name` varchar(255) DEFAULT NULL,
-  `ename` varchar(255) DEFAULT NULL,
-  `status` int(10) DEFAULT '1',
-  `style` int(10) DEFAULT NULL,
-  `flag` int(1) unsigned zerofill DEFAULT '0' COMMENT '0代表列表1代表文章',
-  `switch` int(10) DEFAULT NULL,
-  `remark` text,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=301 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of jxnu_category
--- ----------------------------
+INSERT INTO `jxnu_article` VALUES ('42', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '哈哈哈', '2', '2019-04-27 21:14:00', '20', '1', 'http://localwechatstatic.wvwvw.cn/tmp_56ed4c96ab78066041e8e7b5be51f85d16f36dcbe618b322.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('43', 'oh43t0HMFD38_wdko4y--ZYAxo14', '求小姐姐陪散步！', '8', '2019-04-28 21:11:00', '10', '1', 'http://localwechatstatic.wvwvw.cn/tmp_cd572564dd0a154126139fe2933fb0e804492556911a7bc0.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('45', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '正大坊约起', '0', '2019-05-28 19:42:00', '17', '1', '', '1');
+INSERT INTO `jxnu_article` VALUES ('47', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '最好吃的干锅', '0', '2019-04-28 18:48:15', '5', '2', 'http://localwechatstatic.wvwvw.cn/tmp_d37657d0105da0ae7acd9556ec74ba38768e8d8b89bd0c37.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('48', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '好地方', '0', '2019-04-28 18:55:25', '5', '2', 'http://localwechatstatic.wvwvw.cn/tmp_87dffbbc4547b07a42d4f019181e1e3b96cc4e5414a087f7.jpg', '1');
+INSERT INTO `jxnu_article` VALUES ('49', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '啊啊啊', '0', '2019-04-29 03:01:00', '12', '1', '', '1');
 
 -- ----------------------------
 -- Table structure for jxnu_collect
@@ -90,18 +75,50 @@ CREATE TABLE `jxnu_collect` (
   `article_id` int(2) DEFAULT NULL,
   `user_id` varchar(255) DEFAULT NULL,
   `collect_type` int(2) DEFAULT NULL COMMENT '点赞，收藏互助，收藏资源，收藏风景',
+  `create_time` datetime DEFAULT NULL,
   `status` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jxnu_collect
 -- ----------------------------
-INSERT INTO `jxnu_collect` VALUES ('1', '1', '123123', '1', '1');
-INSERT INTO `jxnu_collect` VALUES ('2', '1', '1039115768', '1', '1');
-INSERT INTO `jxnu_collect` VALUES ('3', '2', '123123', '1', '1');
-INSERT INTO `jxnu_collect` VALUES ('4', '1', '123123', '2', '1');
-INSERT INTO `jxnu_collect` VALUES ('5', '12', '10', '1', '1');
+INSERT INTO `jxnu_collect` VALUES ('1', '1', '123123', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('2', '1', '1039115768', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('3', '2', '123123', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('4', '1', '123123', '2', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('5', '12', '10', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('18', '5', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-05-02 09:10:40', '0');
+INSERT INTO `jxnu_collect` VALUES ('19', '6', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-05-02 09:10:33', '0');
+INSERT INTO `jxnu_collect` VALUES ('20', '7', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-27 09:16:38', '0');
+INSERT INTO `jxnu_collect` VALUES ('21', '42', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-27 09:16:38', '0');
+INSERT INTO `jxnu_collect` VALUES ('22', '5', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-05-04 06:36:37', '0');
+INSERT INTO `jxnu_collect` VALUES ('23', '6', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 09:16:38', '0');
+INSERT INTO `jxnu_collect` VALUES ('24', '8', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-27 09:16:38', '0');
+INSERT INTO `jxnu_collect` VALUES ('25', '49', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('26', '14', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-28 18:33:42', '0');
+INSERT INTO `jxnu_collect` VALUES ('27', '15', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('28', '12', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-30 19:23:59', '1');
+INSERT INTO `jxnu_collect` VALUES ('29', '16', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('30', '7', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 09:16:38', '0');
+INSERT INTO `jxnu_collect` VALUES ('31', '0', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 09:16:38', '0');
+INSERT INTO `jxnu_collect` VALUES ('32', '26', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('33', '9', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-29 22:51:13', '1');
+INSERT INTO `jxnu_collect` VALUES ('34', '37', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_collect` VALUES ('35', '51', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-30 19:26:16', '0');
+INSERT INTO `jxnu_collect` VALUES ('36', '52', 'oh43t0HMFD38_wdko4y--ZYAxo14', '2', '2019-04-27 21:12:31', '1');
+INSERT INTO `jxnu_collect` VALUES ('37', '52', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-27 21:12:45', '1');
+INSERT INTO `jxnu_collect` VALUES ('38', '43', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-27 21:18:30', '1');
+INSERT INTO `jxnu_collect` VALUES ('39', '44', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-28 17:01:36', '1');
+INSERT INTO `jxnu_collect` VALUES ('40', '57', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-28 17:10:14', '1');
+INSERT INTO `jxnu_collect` VALUES ('41', '60', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-28 17:10:19', '1');
+INSERT INTO `jxnu_collect` VALUES ('42', '59', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-28 17:10:22', '1');
+INSERT INTO `jxnu_collect` VALUES ('43', '46', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-04-28 18:43:29', '0');
+INSERT INTO `jxnu_collect` VALUES ('44', '48', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-05-02 09:09:58', '0');
+INSERT INTO `jxnu_collect` VALUES ('45', '47', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2019-05-04 06:36:57', '1');
+INSERT INTO `jxnu_collect` VALUES ('46', '13', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-30 19:23:56', '1');
+INSERT INTO `jxnu_collect` VALUES ('47', '62', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-04-30 19:26:18', '1');
+INSERT INTO `jxnu_collect` VALUES ('48', '65', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '2019-05-02 09:10:28', '1');
 
 -- ----------------------------
 -- Table structure for jxnu_college
@@ -174,52 +191,56 @@ CREATE TABLE `jxnu_comment` (
   `user_id` varchar(255) DEFAULT NULL,
   `article_id` int(1) DEFAULT NULL,
   `content` varchar(255) DEFAULT NULL,
+  `checked` int(1) unsigned DEFAULT '0',
+  `like` int(255) NOT NULL DEFAULT '0',
   `create_time` datetime DEFAULT NULL,
-  `status` int(1) DEFAULT '1',
+  `status` int(1) unsigned zerofill DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jxnu_comment
 -- ----------------------------
-INSERT INTO `jxnu_comment` VALUES ('5', '2', '5', '好像是我室友', '2017-11-26 16:20:48', '1');
-INSERT INTO `jxnu_comment` VALUES ('6', '3', '5', '楼上认错了吧', '2017-11-26 16:21:49', '1');
-INSERT INTO `jxnu_comment` VALUES ('7', '4', '5', '这不是我家茹茹吗', '2017-11-26 16:22:12', '1');
-INSERT INTO `jxnu_comment` VALUES ('8', '5', '6', '没从那经过', '2017-11-26 16:28:47', '1');
-INSERT INTO `jxnu_comment` VALUES ('9', '6', '6', '心疼楼主三十秒。', '2017-11-26 16:29:08', '1');
-INSERT INTO `jxnu_comment` VALUES ('10', '7', '6', '是灰色的吗？', '2017-11-26 16:30:14', '1');
-INSERT INTO `jxnu_comment` VALUES ('11', '9', '7', '小哥哥可以不', '2017-11-26 16:42:32', '1');
-INSERT INTO `jxnu_comment` VALUES ('12', '10', '7', '我刚好有空哦！私聊私聊', '2017-11-26 16:42:52', '1');
-INSERT INTO `jxnu_comment` VALUES ('13', '11', '7', '我就在你隔壁', '2017-11-26 16:43:09', '1');
-INSERT INTO `jxnu_comment` VALUES ('14', '13', '8', '找人陪呗', '2017-11-26 16:49:05', '1');
-INSERT INTO `jxnu_comment` VALUES ('15', '14', '8', '多和身边的人沟通', '2017-11-26 16:49:19', '1');
-INSERT INTO `jxnu_comment` VALUES ('16', '16', '9', '我就是你的小姐姐，私聊我嘿嘿', '2017-11-26 16:53:02', '1');
-INSERT INTO `jxnu_comment` VALUES ('17', '17', '9', '有人找你o，明月同学', '2017-11-26 16:53:16', '1');
-INSERT INTO `jxnu_comment` VALUES ('18', '18', '9', '楼主可以的', '2017-11-26 16:53:29', '1');
-INSERT INTO `jxnu_comment` VALUES ('19', '20', '10', '感觉有点危险，毕竟好久没有上英语课了', '2017-11-26 16:57:28', '1');
-INSERT INTO `jxnu_comment` VALUES ('20', '21', '10', '急啥，人有多大胆，复习有多晚。反正我不怕，改革就是平时分多了而已', '2017-11-26 16:57:43', '1');
-INSERT INTO `jxnu_comment` VALUES ('21', '15', '10', '楼上正解', '2017-11-26 16:58:07', '1');
-INSERT INTO `jxnu_comment` VALUES ('22', '23', '11', '我也从旁边经过', '2017-11-26 17:01:02', '1');
-INSERT INTO `jxnu_comment` VALUES ('23', '25', '12', '首页第二个资源，你值得拥有', '2017-11-26 17:03:26', '1');
-INSERT INTO `jxnu_comment` VALUES ('24', '27', '13', '感觉大冰来我们学校好多次了，，，', '2017-11-26 17:06:29', '1');
-INSERT INTO `jxnu_comment` VALUES ('25', '28', '13', '挺喜欢他的书', '2017-11-26 17:06:41', '1');
-INSERT INTO `jxnu_comment` VALUES ('26', '29', '13', '可以啊', '2017-11-26 17:06:53', '1');
-
--- ----------------------------
--- Table structure for jxnu_downloads_log
--- ----------------------------
-DROP TABLE IF EXISTS `jxnu_downloads_log`;
-CREATE TABLE `jxnu_downloads_log` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `type` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of jxnu_downloads_log
--- ----------------------------
+INSERT INTO `jxnu_comment` VALUES ('5', '2', '5', '好像是我室友', '0', '0', '2017-11-26 16:20:48', '1');
+INSERT INTO `jxnu_comment` VALUES ('6', '3', '5', '楼上认错了吧', '0', '0', '2017-11-26 16:21:49', '1');
+INSERT INTO `jxnu_comment` VALUES ('7', '4', '5', '这不是我家茹茹吗', '0', '0', '2017-11-26 16:22:12', '1');
+INSERT INTO `jxnu_comment` VALUES ('8', '5', '6', '没从那经过', '0', '0', '2017-11-26 16:28:47', '1');
+INSERT INTO `jxnu_comment` VALUES ('9', '6', '6', '心疼楼主三十秒。', '0', '1', '2017-11-26 16:29:08', '1');
+INSERT INTO `jxnu_comment` VALUES ('10', '7', '6', '是灰色的吗？', '0', '0', '2017-11-26 16:30:14', '1');
+INSERT INTO `jxnu_comment` VALUES ('11', '9', '7', '小哥哥可以不', '0', '0', '2017-11-26 16:42:32', '1');
+INSERT INTO `jxnu_comment` VALUES ('12', '10', '7', '我刚好有空哦！私聊私聊', '0', '1', '2017-11-26 16:42:52', '1');
+INSERT INTO `jxnu_comment` VALUES ('13', '11', '7', '我就在你隔壁', '0', '1', '2017-11-26 16:43:09', '1');
+INSERT INTO `jxnu_comment` VALUES ('14', '13', '8', '找人陪呗', '0', '0', '2017-11-26 16:49:05', '1');
+INSERT INTO `jxnu_comment` VALUES ('15', '14', '8', '多和身边的人沟通', '0', '1', '2017-11-26 16:49:19', '1');
+INSERT INTO `jxnu_comment` VALUES ('16', '16', '9', '我就是你的小姐姐，私聊我嘿嘿', '0', '1', '2017-11-26 16:53:02', '1');
+INSERT INTO `jxnu_comment` VALUES ('17', '17', '9', '有人找你o，明月同学', '0', '0', '2017-11-26 16:53:16', '1');
+INSERT INTO `jxnu_comment` VALUES ('18', '18', '9', '楼主可以的', '0', '0', '2017-11-26 16:53:29', '1');
+INSERT INTO `jxnu_comment` VALUES ('19', '20', '10', '感觉有点危险，毕竟好久没有上英语课了', '0', '0', '2017-11-26 16:57:28', '1');
+INSERT INTO `jxnu_comment` VALUES ('20', '21', '10', '急啥，人有多大胆，复习有多晚。反正我不怕，改革就是平时分多了而已', '0', '0', '2017-11-26 16:57:43', '1');
+INSERT INTO `jxnu_comment` VALUES ('21', '15', '10', '楼上正解', '0', '0', '2017-11-26 16:58:07', '1');
+INSERT INTO `jxnu_comment` VALUES ('22', '23', '11', '我也从旁边经过', '0', '0', '2017-11-26 17:01:02', '1');
+INSERT INTO `jxnu_comment` VALUES ('23', '25', '12', '首页第二个资源，你值得拥有', '0', '0', '2017-11-26 17:03:26', '1');
+INSERT INTO `jxnu_comment` VALUES ('24', '27', '13', '感觉大冰来我们学校好多次了，，，', '0', '0', '2017-11-26 17:06:29', '1');
+INSERT INTO `jxnu_comment` VALUES ('25', '28', '13', '挺喜欢他的书', '0', '0', '2017-11-26 17:06:41', '1');
+INSERT INTO `jxnu_comment` VALUES ('26', '29', '13', '可以啊', '0', '1', '2017-11-26 17:06:53', '1');
+INSERT INTO `jxnu_comment` VALUES ('42', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '5', '是', '0', '0', '2019-04-20 19:05:07', '1');
+INSERT INTO `jxnu_comment` VALUES ('49', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '5', '嗯嗯啊', '0', '1', '2019-04-21 13:37:46', '1');
+INSERT INTO `jxnu_comment` VALUES ('50', '29', '29', '好啊', '1', '0', '2019-04-27 09:16:38', '1');
+INSERT INTO `jxnu_comment` VALUES ('51', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '29', '真的', '1', '0', '2019-04-27 09:32:38', '1');
+INSERT INTO `jxnu_comment` VALUES ('52', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '42', '真辣鸡', '0', '2', '2019-04-27 21:12:27', '1');
+INSERT INTO `jxnu_comment` VALUES ('53', 'oh43t0HMFD38_wdko4y--ZYAxo14', '42', '我我我', '0', '0', '2019-04-27 21:13:41', '1');
+INSERT INTO `jxnu_comment` VALUES ('54', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', '帅炸天的', '0', '0', '2019-04-27 21:18:46', '1');
+INSERT INTO `jxnu_comment` VALUES ('55', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', '是呀是呀', '0', '0', '2019-04-28 09:08:28', '1');
+INSERT INTO `jxnu_comment` VALUES ('56', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', '哈哈哈', '0', '0', '2019-04-28 09:09:23', '1');
+INSERT INTO `jxnu_comment` VALUES ('57', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', 'nonono', '0', '1', '2019-04-28 09:09:52', '1');
+INSERT INTO `jxnu_comment` VALUES ('58', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', 'soga', '0', '0', '2019-04-28 09:10:22', '1');
+INSERT INTO `jxnu_comment` VALUES ('59', 'oh43t0HMFD38_wdko4y--ZYAxo14', '43', '为啥没有小姐姐回应呢？', '0', '1', '2019-04-28 09:19:27', '1');
+INSERT INTO `jxnu_comment` VALUES ('60', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', '不好', '0', '1', '2019-04-28 17:02:35', '1');
+INSERT INTO `jxnu_comment` VALUES ('61', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '43', '强', '0', '0', '2019-04-28 17:10:29', '1');
+INSERT INTO `jxnu_comment` VALUES ('62', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '29', '嗯呐', '0', '1', '2019-04-28 18:24:22', '1');
+INSERT INTO `jxnu_comment` VALUES ('63', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '29', '是呀', '0', '0', '2019-04-30 19:26:27', '1');
+INSERT INTO `jxnu_comment` VALUES ('64', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '29', '哈哈哈', '0', '0', '2019-04-30 19:43:02', '1');
+INSERT INTO `jxnu_comment` VALUES ('65', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '5', '是啊', '0', '1', '2019-05-02 09:10:10', '1');
 
 -- ----------------------------
 -- Table structure for jxnu_frame_access
@@ -440,7 +461,7 @@ CREATE TABLE `jxnu_frame_log` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `project_id` (`controller`)
-) ENGINE=MyISAM AUTO_INCREMENT=157946 DEFAULT CHARSET=utf8 COMMENT='操作日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=157951 DEFAULT CHARSET=utf8 COMMENT='操作日志表';
 
 -- ----------------------------
 -- Records of jxnu_frame_log
@@ -632,6 +653,11 @@ INSERT INTO `jxnu_frame_log` VALUES ('157942', '42', 'Comment', 'Comment', 'all'
 INSERT INTO `jxnu_frame_log` VALUES ('157943', '42', 'Comment', 'Comment', 'ajax', '/index.php/Admin/Comment/ajax?q=list', '{\"draw\":\"1\",\"order\":{\"field\":\"_checkbox\"},\"start\":\"0\",\"length\":\"10\",\"q\":\"list\",\"Hm_lvt_17615c0c7560aebb3674a0aa658e3b9c\":\"1511322785,1511530156\",\"HyFrame_SSID\":\"k5j6o3i3tv65dg9pmt9mkhcit3\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1511530187,1511712446,1512367042\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1512367061\"}', 'SELECT `content` FROM `jxnu_comment` WHERE `content` = \'有人找你o，明月同学\' LIMIT 1  ', ' >> 消息与评论内容信息 >> 数据请求 >> 共22 条记录', '219.229.253.148', '1512367151', '1');
 INSERT INTO `jxnu_frame_log` VALUES ('157944', '42', 'Articles', 'Articles', 'all', '/index.php/Admin/Articles/all.html', '{\"Hm_lvt_17615c0c7560aebb3674a0aa658e3b9c\":\"1511322785,1511530156\",\"HyFrame_SSID\":\"k5j6o3i3tv65dg9pmt9mkhcit3\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1511530187,1511712446,1512367042\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1512367158\"}', '', ' >> 动态与文章内容信息 >> 管理列表页', '219.229.253.148', '1512367191', '1');
 INSERT INTO `jxnu_frame_log` VALUES ('157945', '42', 'Articles', 'Articles', 'ajax', '/index.php/Admin/Articles/ajax?q=list', '{\"draw\":\"1\",\"order\":{\"field\":\"_checkbox\"},\"start\":\"0\",\"length\":\"10\",\"q\":\"list\",\"Hm_lvt_17615c0c7560aebb3674a0aa658e3b9c\":\"1511322785,1511530156\",\"HyFrame_SSID\":\"k5j6o3i3tv65dg9pmt9mkhcit3\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1511530187,1511712446,1512367042\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1512367158\"}', 'SELECT `content` FROM `jxnu_article` WHERE `content` = \'哪位小姐姐可以帮忙带一杯奶茶吗？地点右下角，s230\' LIMIT 1  ', ' >> 动态与文章内容信息 >> 数据请求 >> 共12 条记录', '219.229.253.148', '1512367191', '1');
+INSERT INTO `jxnu_frame_log` VALUES ('157946', '40', null, 'HyStart', 'ajax', null, '{\"u\":\"72eqUCAF1fb038qNkcJvlg==4733272\",\"p\":\"QecToVdeqwybyMgB8wAO5v98bxkRC9jAMM8QwvDEJ+lGDmzgiNmw0Cx4xA7+J5Or2856674\"}', null, ' >> 登录验证 >> <span class=\'text-success\'>成功</span>', '35.236.90.25', '1555990212', '1');
+INSERT INTO `jxnu_frame_log` VALUES ('157947', '40', 'Users', 'Users', 'all', '/index.php/Admin/Users/all.html', '{\"pgv_pvi\":\"7831534592\",\"HyFrame_SSID\":\"gaj69bftptvq0018pjdsqk18m0\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990066\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990234\"}', '', ' >> 用户信息 >> 管理列表页', '35.236.90.25', '1555990232', '1');
+INSERT INTO `jxnu_frame_log` VALUES ('157948', '40', 'Users', 'Users', 'ajax', '/index.php/Admin/Users/ajax?q=list', '{\"draw\":\"1\",\"order\":{\"field\":\"_checkbox\"},\"start\":\"0\",\"length\":\"10\",\"q\":\"list\",\"pgv_pvi\":\"7831534592\",\"HyFrame_SSID\":\"gaj69bftptvq0018pjdsqk18m0\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990066\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990234\"}', 'SELECT `id`,`name`,`real_name`,`roles`,`user_no`,`student_card`,`pic`,`authrity`,`integral`,`sex`,`student_no`,`qq`,`email`,`session_id`,`login_last_time`,`login_times`,`status`,`admission_time`,`fav`,`tag`,`description`,`score`,`college_id` FROM `jxnu_user` WHERE `roles` <> 31 ORDER BY id desc LIMIT 10  ', ' >> 用户信息 >> 数据请求 >> 共37 条记录', '35.236.90.25', '1555990237', '1');
+INSERT INTO `jxnu_frame_log` VALUES ('157949', '40', 'Users', 'Users', 'ajax', '/index.php/Admin/Users/ajax?q=list', '{\"draw\":\"1\",\"order\":{\"field\":\"_checkbox\"},\"start\":\"0\",\"length\":\"10\",\"q\":\"list\",\"pgv_pvi\":\"7831534592\",\"HyFrame_SSID\":\"gaj69bftptvq0018pjdsqk18m0\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990066\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990242\"}', 'SELECT `id`,`name`,`real_name`,`roles`,`user_no`,`student_card`,`pic`,`authrity`,`integral`,`sex`,`student_no`,`qq`,`email`,`session_id`,`login_last_time`,`login_times`,`status`,`admission_time`,`fav`,`tag`,`description`,`score`,`college_id` FROM `jxnu_user` WHERE `roles` <> 31 ORDER BY id desc LIMIT 10  ', ' >> 用户信息 >> 数据请求 >> 共37 条记录', '35.236.90.25', '1555990255', '1');
+INSERT INTO `jxnu_frame_log` VALUES ('157950', '40', 'Users', 'Users', 'ajax', '/index.php/Admin/Users/ajax?q=list', '{\"draw\":\"1\",\"order\":{\"field\":\"_checkbox\"},\"start\":\"0\",\"length\":\"10\",\"q\":\"list\",\"pgv_pvi\":\"7831534592\",\"HyFrame_SSID\":\"gaj69bftptvq0018pjdsqk18m0\",\"Hm_lvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990066\",\"Hm_lpvt_41c66ca2d9e89051b8f673b25979b6a0\":\"1555990259\"}', 'SELECT `id`,`name`,`real_name`,`roles`,`user_no`,`student_card`,`pic`,`authrity`,`integral`,`sex`,`student_no`,`qq`,`email`,`session_id`,`login_last_time`,`login_times`,`status`,`admission_time`,`fav`,`tag`,`description`,`score`,`college_id` FROM `jxnu_user` WHERE `roles` <> 31 ORDER BY id desc LIMIT 10  ', ' >> 用户信息 >> 数据请求 >> 共37 条记录', '35.236.90.25', '1555990266', '1');
 
 -- ----------------------------
 -- Table structure for jxnu_frame_role
@@ -667,28 +693,35 @@ CREATE TABLE `jxnu_frame_session` (
 -- ----------------------------
 -- Records of jxnu_frame_session
 -- ----------------------------
-INSERT INTO `jxnu_frame_session` VALUES ('4m69q8n7v3lvdg5hamv3f89fk3', '1555485400', '');
-INSERT INTO `jxnu_frame_session` VALUES ('6lvr9lbskqqr4t9oa5st16vte4', '1555484707', '');
-INSERT INTO `jxnu_frame_session` VALUES ('84bhn98fnnln1p6u6d1o96qjq4', '1555485384', '');
-INSERT INTO `jxnu_frame_session` VALUES ('aforgmbjcb7951ntd44uvh7u90', '1555485424', '');
-INSERT INTO `jxnu_frame_session` VALUES ('b3qt3uosc9kkab52eg9uej1ij4', '1555485384', '');
-INSERT INTO `jxnu_frame_session` VALUES ('cueo8na4tg3rhsfs63hsq4fo03', '1555485368', '');
-INSERT INTO `jxnu_frame_session` VALUES ('dfpnbu0p4o6lrd0dnguqsp6mf6', '1555485671', '');
-INSERT INTO `jxnu_frame_session` VALUES ('dunm4asmnu5cud879bsud6p983', '1555485369', '');
-INSERT INTO `jxnu_frame_session` VALUES ('eaetouf4n250lq8kfb6fqv4640', '1555485361', '');
-INSERT INTO `jxnu_frame_session` VALUES ('ems99d8654ql9usldki112t2b6', '1555485634', '');
-INSERT INTO `jxnu_frame_session` VALUES ('g3ivkovmuhlc5ugto21njt4mr6', '1555485369', '');
-INSERT INTO `jxnu_frame_session` VALUES ('hinlofqtdbfhhm7mo216f430c6', '1555484504', '');
-INSERT INTO `jxnu_frame_session` VALUES ('hp0iu2hu1u5dj1jnvgmnjr88h4', '1555484503', '');
-INSERT INTO `jxnu_frame_session` VALUES ('jm3b2aai3cmie914cen6vnfs36', '1555485369', '');
-INSERT INTO `jxnu_frame_session` VALUES ('l10q59i6s2llera44um9jt5nr7', '1555485384', '');
-INSERT INTO `jxnu_frame_session` VALUES ('l320o248a0fdbvm3817r2keia1', '1555485698', '');
-INSERT INTO `jxnu_frame_session` VALUES ('l4ggr7k9es4brc178ari0erh47', '1555485361', '');
-INSERT INTO `jxnu_frame_session` VALUES ('qv3u7agmm61p3i87jv1o8isuc2', '1555485361', '');
-INSERT INTO `jxnu_frame_session` VALUES ('r7nmvrlpkngrjt5ka4unllmvf4', '1555484707', '');
-INSERT INTO `jxnu_frame_session` VALUES ('rlioltgaqna9mo5ppv3pvvbnl3', '1555484707', '');
-INSERT INTO `jxnu_frame_session` VALUES ('tke52d042iscs1g755mdhrrm25', '1555485391', '');
-INSERT INTO `jxnu_frame_session` VALUES ('va272pdm3kq673oo1g30ivajr6', '1555484503', '');
+INSERT INTO `jxnu_frame_session` VALUES ('1pu28ptn47tdepd6em30fv5uc1', '1557031665', '');
+INSERT INTO `jxnu_frame_session` VALUES ('2f5fd3cqlb5r9nl00mbrrtgjl0', '1557032435', '');
+INSERT INTO `jxnu_frame_session` VALUES ('4vnhtuhfd06se2picj34q2r6n1', '1557032336', '');
+INSERT INTO `jxnu_frame_session` VALUES ('5be2rgqscud9nrpn5jngakbc05', '1557031557', '');
+INSERT INTO `jxnu_frame_session` VALUES ('5r3l2jgdl9s18svqjgrlpnl0v2', '1557032432', '');
+INSERT INTO `jxnu_frame_session` VALUES ('6gn1doe1k8gnb5392a2ciqffl0', '1557032382', '');
+INSERT INTO `jxnu_frame_session` VALUES ('751ache14rocl889n4dbsk91j6', '1557032348', '');
+INSERT INTO `jxnu_frame_session` VALUES ('8ptltu78klosq2nbnb1r5opeu6', '1557031665', '');
+INSERT INTO `jxnu_frame_session` VALUES ('8s0b8q2a3rtsv7143sdhcccsv6', '1557031521', '');
+INSERT INTO `jxnu_frame_session` VALUES ('9unsnfe5rinea175u4m41ufgu1', '1557032434', '');
+INSERT INTO `jxnu_frame_session` VALUES ('ajhm84sc04tvqno0gltkf7r8o1', '1557031550', '');
+INSERT INTO `jxnu_frame_session` VALUES ('aocbu16k46c4cpo8ej4qghecm3', '1557032436', '');
+INSERT INTO `jxnu_frame_session` VALUES ('bs7l8379i1mpdecc2j2pl4fe57', '1557031665', '');
+INSERT INTO `jxnu_frame_session` VALUES ('c9clo5l6hjsu20v8qm0a05kjn1', '1557032438', '');
+INSERT INTO `jxnu_frame_session` VALUES ('cp8f2plrh5pjlfh6vi02m4bnp6', '1557032469', '');
+INSERT INTO `jxnu_frame_session` VALUES ('djqdkahn6nnndtd7fltu117e77', '1557032491', '');
+INSERT INTO `jxnu_frame_session` VALUES ('dkp4a8unq1v5i04kf1kfdptbs7', '1557032432', '');
+INSERT INTO `jxnu_frame_session` VALUES ('hgrad3dpjob4ep0a0kncimpa20', '1557032431', '');
+INSERT INTO `jxnu_frame_session` VALUES ('i7hsk8rtg83q605gkuqgv02ji1', '1557032495', '');
+INSERT INTO `jxnu_frame_session` VALUES ('igbeo5hlv3mtpv6ktdvlin0pv7', '1557032470', '');
+INSERT INTO `jxnu_frame_session` VALUES ('jgqp3s3ik6fn8nl51n6ceu5ru5', '1557032485', '');
+INSERT INTO `jxnu_frame_session` VALUES ('lhuebsusirqu447heqg1rlfmp2', '1557032489', '');
+INSERT INTO `jxnu_frame_session` VALUES ('r6gncd18kgg5mghlfn59pcbel6', '1557032335', '');
+INSERT INTO `jxnu_frame_session` VALUES ('r8lhet2q8sinn9daan0d0kjh60', '1557031521', '');
+INSERT INTO `jxnu_frame_session` VALUES ('rt85tsa82actq32mrbf605m4j7', '1557032336', '');
+INSERT INTO `jxnu_frame_session` VALUES ('s4n9gltejq6ipl4vqke4lvqnk3', '1557032381', '');
+INSERT INTO `jxnu_frame_session` VALUES ('u70diumravuoi86fd6urq1slm3', '1557032336', '');
+INSERT INTO `jxnu_frame_session` VALUES ('v26o86viktov7j01t4hsskcnu7', '1557032336', '');
+INSERT INTO `jxnu_frame_session` VALUES ('vd7a59jlpedf6askpj9oakk6e7', '1557031521', '');
 
 -- ----------------------------
 -- Table structure for jxnu_frame_setting
@@ -720,7 +753,7 @@ CREATE TABLE `jxnu_position` (
   `longitude` varchar(30) DEFAULT NULL,
   `status` int(1) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jxnu_position
@@ -748,6 +781,12 @@ INSERT INTO `jxnu_position` VALUES ('29', '36', null, '39.95933', '116.29845', '
 INSERT INTO `jxnu_position` VALUES ('30', '37', null, '39.95933', '116.29845', '1');
 INSERT INTO `jxnu_position` VALUES ('31', '38', null, '28.54538', '115.94422', '1');
 INSERT INTO `jxnu_position` VALUES ('32', '39', null, '28.681401', '116.033734', '1');
+INSERT INTO `jxnu_position` VALUES ('33', '43', null, '28.676866', '116.027928', '1');
+INSERT INTO `jxnu_position` VALUES ('34', '45', null, '28.686493', '116.028518', '1');
+INSERT INTO `jxnu_position` VALUES ('35', '46', null, '28.686493', '116.028518', '1');
+INSERT INTO `jxnu_position` VALUES ('36', '47', null, '28.687045', '116.028321', '1');
+INSERT INTO `jxnu_position` VALUES ('37', '48', null, '28.687045', '116.028321', '1');
+INSERT INTO `jxnu_position` VALUES ('38', '49', null, '28.68202', '115.85794', '1');
 
 -- ----------------------------
 -- Table structure for jxnu_resources
@@ -756,31 +795,80 @@ DROP TABLE IF EXISTS `jxnu_resources`;
 CREATE TABLE `jxnu_resources` (
   `id` int(1) NOT NULL AUTO_INCREMENT,
   `category_id` int(1) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `downloads` int(5) DEFAULT NULL,
+  `user_id` varchar(255) DEFAULT NULL,
+  `downloads` int(5) unsigned DEFAULT '0',
   `value` int(5) DEFAULT NULL,
   `resource_type` int(1) DEFAULT NULL COMMENT '上传资源格式',
   `status` int(1) NOT NULL DEFAULT '1',
   `resource_name` varchar(255) DEFAULT NULL,
-  `uri` varchar(11) NOT NULL,
+  `uri` varchar(255) NOT NULL,
   `college_id` int(11) DEFAULT NULL,
-  `fav` int(11) NOT NULL,
+  `fav` int(11) unsigned DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jxnu_resources
 -- ----------------------------
-INSERT INTO `jxnu_resources` VALUES ('1', '1', '1', '5000', '2000', '2', '1', '数字逻辑课后习题答案', '1.ppt', '27', '1');
-INSERT INTO `jxnu_resources` VALUES ('2', '1', '1', '5000', '2000', '1', '1', '高数课后习题答案', '2.doc', null, '0');
+INSERT INTO `jxnu_resources` VALUES ('1', '1', '1', '5000', '3', '2', '1', '数字逻辑课后习题答案', '1.ppt', '27', '1');
+INSERT INTO `jxnu_resources` VALUES ('2', '1', '1', '300', '8', '1', '1', '高数课后习题答案', '2.doc', null, '0');
 INSERT INTO `jxnu_resources` VALUES ('3', '1', '1', '22', '2', '1', '1', '15考研真题', '3.doc', null, '0');
 INSERT INTO `jxnu_resources` VALUES ('4', '3', '1', '1', '1', '3', '1', '马原题库', '4.xls', '1001', '0');
-INSERT INTO `jxnu_resources` VALUES ('5', '2', '1', '1', '1', '1', '1', '近代史题库', '5.doc', '1002', '0');
-INSERT INTO `jxnu_resources` VALUES ('6', '1', '1', '222', '1', '1', '1', '数据结构课后习题答案', '2.doc', '23', '1');
+INSERT INTO `jxnu_resources` VALUES ('5', '2', '1', '1', '5', '1', '1', '近代史题库', '5.doc', '1002', '0');
+INSERT INTO `jxnu_resources` VALUES ('6', '1', '1', '222', '1', '2', '1', '数据结构课后习题答案', '1.ppt', '23', '1');
 INSERT INTO `jxnu_resources` VALUES ('7', '1', '2', '1', '1', '1', '1', '数据结构15级试卷A', '2.doc', '23', '1');
-INSERT INTO `jxnu_resources` VALUES ('8', '1', '1', '1', '1', '1', '1', '数据结构15级试卷B', '2.doc', '27', '1');
-INSERT INTO `jxnu_resources` VALUES ('9', '1', '1', '1', '1', '1', '1', '计算机组成原理实验仪器介绍及实验报告', '2.doc', '25', '1');
+INSERT INTO `jxnu_resources` VALUES ('8', '1', '1', '1', '3', '1', '1', '数据结构15级试卷B', '2.doc', '27', '1');
+INSERT INTO `jxnu_resources` VALUES ('9', '1', '1', '1', '1', '1', '1', '计算机组成原理实验仪器介绍及实验报告', '2.doc', '25', '0');
 INSERT INTO `jxnu_resources` VALUES ('10', '1', '1', '1', '1', '1', '1', '计算机网络数据统计', '2.doc', '26', '1');
+INSERT INTO `jxnu_resources` VALUES ('18', '1', '2', '0', '13', '2', '1', '简单选课系统结题.pptx', '141_433700_简单选课系统结题.pptx', '23', '0');
+INSERT INTO `jxnu_resources` VALUES ('19', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '0', '5', '1', '1', '简单选课系统结题报告.docx', '141_846456_简单选课系统结题报告.docx', '23', '1');
+INSERT INTO `jxnu_resources` VALUES ('143', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '0', '8', '1', '1', '宏奕团队手册.docx', '141_687618_宏奕团队手册.docx', '23', '0');
+INSERT INTO `jxnu_resources` VALUES ('145', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '0', '7', '1', '1', '数字逻辑实验', '141_223321_讲说稿.docx', '27', '0');
+INSERT INTO `jxnu_resources` VALUES ('146', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '0', '6', '1', '1', 'c', '141_671593_讲说稿.docx', '24', '0');
+
+-- ----------------------------
+-- Table structure for jxnu_score_log
+-- ----------------------------
+DROP TABLE IF EXISTS `jxnu_score_log`;
+CREATE TABLE `jxnu_score_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(255) NOT NULL,
+  `src_user_id` varchar(255) NOT NULL,
+  `value` int(2) DEFAULT NULL,
+  `type` int(1) NOT NULL,
+  `blong` int(1) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of jxnu_score_log
+-- ----------------------------
+INSERT INTO `jxnu_score_log` VALUES ('9', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '1', '1', '1', '2019-04-27 15:51:55', '1');
+INSERT INTO `jxnu_score_log` VALUES ('10', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '1', '2', '2019-04-27 15:51:55', '1');
+INSERT INTO `jxnu_score_log` VALUES ('11', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '13', '2', '1', '2019-04-27 16:22:03', '1');
+INSERT INTO `jxnu_score_log` VALUES ('12', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '13', '2', '2', '2019-04-27 16:22:03', '1');
+INSERT INTO `jxnu_score_log` VALUES ('13', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '7', '1', '1', '2019-04-28 09:22:34', '1');
+INSERT INTO `jxnu_score_log` VALUES ('14', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '7', '1', '2', '2019-04-28 09:22:34', '1');
+INSERT INTO `jxnu_score_log` VALUES ('15', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '2', '1', '1', '2019-04-28 10:03:47', '1');
+INSERT INTO `jxnu_score_log` VALUES ('16', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '1', '2', '2019-04-28 10:03:47', '1');
+INSERT INTO `jxnu_score_log` VALUES ('17', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '7', '1', '1', '2019-04-28 16:41:21', '1');
+INSERT INTO `jxnu_score_log` VALUES ('18', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '7', '1', '2', '2019-04-28 16:41:21', '1');
+INSERT INTO `jxnu_score_log` VALUES ('19', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '7', '1', '1', '2019-04-28 16:43:39', '1');
+INSERT INTO `jxnu_score_log` VALUES ('20', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '7', '1', '2', '2019-04-28 16:43:39', '1');
+INSERT INTO `jxnu_score_log` VALUES ('21', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '1', '1', '1', '2019-04-28 16:52:30', '1');
+INSERT INTO `jxnu_score_log` VALUES ('22', '2', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '1', '2', '2019-04-28 16:52:30', '1');
+INSERT INTO `jxnu_score_log` VALUES ('23', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '8', '1', '1', '2019-04-28 16:53:08', '1');
+INSERT INTO `jxnu_score_log` VALUES ('24', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '8', '1', '2', '2019-04-28 16:53:08', '1');
+INSERT INTO `jxnu_score_log` VALUES ('25', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '3', '1', '1', '2019-04-28 16:56:34', '1');
+INSERT INTO `jxnu_score_log` VALUES ('26', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '3', '1', '2', '2019-04-28 16:56:34', '1');
+INSERT INTO `jxnu_score_log` VALUES ('27', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '2', '13', '1', '1', '2019-04-28 17:12:31', '1');
+INSERT INTO `jxnu_score_log` VALUES ('28', '2', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '13', '1', '2', '2019-04-28 17:12:31', '1');
+INSERT INTO `jxnu_score_log` VALUES ('29', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '3', '1', '1', '2019-04-30 19:26:43', '1');
+INSERT INTO `jxnu_score_log` VALUES ('30', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '3', '1', '2', '2019-04-30 19:26:43', '1');
+INSERT INTO `jxnu_score_log` VALUES ('31', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '1', '3', '1', '1', '2019-04-30 19:43:21', '1');
+INSERT INTO `jxnu_score_log` VALUES ('32', '1', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', '3', '1', '2', '2019-04-30 19:43:21', '1');
 
 -- ----------------------------
 -- Table structure for jxnu_user
@@ -789,14 +877,15 @@ DROP TABLE IF EXISTS `jxnu_user`;
 CREATE TABLE `jxnu_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` char(20) DEFAULT NULL,
-  `roles` char(20) DEFAULT '',
+  `real_name` char(20) DEFAULT NULL,
+  `roles` char(20) DEFAULT '30',
   `user_no` varchar(255) DEFAULT NULL,
-  `password` char(150) DEFAULT NULL,
+  `student_card` char(150) DEFAULT NULL,
   `pic` char(150) DEFAULT NULL,
   `authrity` int(1) DEFAULT NULL,
   `integral` int(20) DEFAULT NULL,
-  `sex` char(1) DEFAULT NULL,
-  `phone` char(60) DEFAULT NULL,
+  `sex` char(20) DEFAULT NULL,
+  `student_no` char(60) DEFAULT NULL,
   `qq` char(12) DEFAULT NULL,
   `email` char(30) DEFAULT NULL,
   `session_id` varchar(255) DEFAULT NULL,
@@ -804,50 +893,64 @@ CREATE TABLE `jxnu_user` (
   `login_times` int(10) unsigned DEFAULT '0',
   `status` int(10) unsigned DEFAULT '1',
   `admission_time` int(10) unsigned DEFAULT NULL,
+  `fav` varchar(255) DEFAULT NULL,
+  `tag` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `score` int(10) unsigned DEFAULT '280',
   `college_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jxnu_user
 -- ----------------------------
-INSERT INTO `jxnu_user` VALUES ('1', '沈大哥', '0', '1039115768', '7bODgmOpMu_ErWSrxeOumHmTYoI02IBMptNSv95WjQ3Mma5cXapxzTgwUNlS2rfgIAgjUjzSqkBsk_oC8gRTJENEPjK2AWGimuDelPrgsIZ6EhHGo3FvdCa8yTZAmiF2', 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', '100000', '', null, null, null, null, null, '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('2', '潘绥铭', '0', '1', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', '2222', null, null, null, null, null, null, '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('3', '稻壳', '0', '2', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('4', '大虾', '0', '3', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('5', '邵燕君', '0', '4', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('6', '米兰', '0', '5', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('7', '勺子', '0', '6', null, 'http://localwechatstatic.wvwvw.cn/1.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('8', '国服第一李白', '0', '7', null, 'http://localwechatstatic.wvwvw.cn/9.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('9', '陈昕', '0', '8', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('10', '芈月', '0', '9', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('11', 'star', '0', '10', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('12', 'hellobick', '0', '11', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('13', '王晓明', '0', '12', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('14', '稻壳er', '0', '13', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('15', '玉米棒', '0', '14', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('16', '包亚明', '0', '15', null, 'http://localwechatstatic.wvwvw.cn/1.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('17', '明月', '0', '16', null, 'http://localwechatstatic.wvwvw.cn/9.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('18', '虾米', '0', '17', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('19', 'mthink', '0', '18', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('20', '南帆', '0', '19', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('21', '布什x', '0', '20', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('22', '筷子', '0', '21', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('23', '陈映芳', '0', '22', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('24', '爆米花', '0', '23', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('25', '戴锦华编', '0', '24', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('26', '戴锦华', '0', '25', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('27', '宋伟杰', '0', '26', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('28', '金庸', '0', '27', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('29', '花生', '0', '28', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('30', '神哥哥', '0', '29', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('38', '运维', '31', '8812', '43gdEpHatNMhjPdkXYwb906wD9XMBclmoJkKdYcXwch3z_jalUOwtPAxVCT7T_eVyXFiRL4f7nz2oaxTbejG2_2PzfYmTFbRhdh1HVLfrB_4Yjb7nJeTJCb97mv4_X6b', 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, '男', null, null, null, '', '1491836767', '221', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('40', '管理员', '31', '123', '43gdEpHatNMhjPdkXYwb906wD9XMBclmoJkKdYcXwch3z_jalUOwtPAxVCT7T_eVyXFiRL4f7nz2oaxTbejG2_2PzfYmTFbRhdh1HVLfrB_4Yjb7nJeTJCb97mv4_X6b', 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, '男', null, null, null, 'eejvli533f98h5hgng90quhlv5', '1507686177', '144', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('42', '11测试', '31', '123123', '7bODgmOpMu_ErWSrxeOumHmTYoI02IBMptNSv95WjQ3Mma5cXapxzTgwUNlS2rfgIAgjUjzSqkBsk_oC8gRTJENEPjK2AWGimuDelPrgsIZ6EhHGo3FvdCa8yTZAmiF2', 'http://localwechatstatic.wvwvw.cn/11.jpg', '1', null, '男', null, null, null, 'k5j6o3i3tv65dg9pmt9mkhcit3', '1512367041', '140', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('43', '辽竹', '', 'Q0j4TwGTfTL0fvcRKgRGia4SykgTLECkkDFDITiawFWYibVcRTrsM2FxA4m3Tn8Xx8SJSVc04eO2BuHMmK6qDviaOQ', null, 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTL0fvcRKgRGia4SykgTLECkkDFDITiawFWYibVcRTrsM2FxA4m3Tn8Xx8SJSVc04eO2BuHMmK6qDviaOQ/0', null, '1', null, null, null, null, '8ffcdcc0e37c27997f72a3803961a7a66d45c455a6e6fdac93b8520f9bb17b2b', '1491836767', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('44', '胡悦', '', 'CpK8F54ibkpLNMjMwxOHia0O7iabGJzF84SYjiaicE88F4Jm6zID7csnRTO7eG0hgYPfG08vZGyzianbLLgNXeVosyDg', null, 'https://wx.qlogo.cn/mmopen/vi_32/CpK8F54ibkpLNMjMwxOHia0O7iabGJzF84SYjiaicE88F4Jm6zID7csnRTO7eG0hgYPfG08vZGyzianbLLgNXeVosyDg/0', null, null, null, null, null, null, '3d1c286215c640f9f295bbb7ac9d2147b1c655298b7833eb9007d4b627c2757f', '1507686177', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('46', '凡尘', '', 'en2ibMiaEiaWmssbxxeoaRvQiaOFV5H06xsWGO9Lpp5vPtibrKiaV5jfR5KicaUMooeaofO2aVeAsXGvFOoRPMpe7CrJg', null, 'https://wx.qlogo.cn/mmopen/vi_32/en2ibMiaEiaWmssbxxeoaRvQiaOFV5H06xsWGO9Lpp5vPtibrKiaV5jfR5KicaUMooeaofO2aVeAsXGvFOoRPMpe7CrJg/0', null, null, null, null, null, null, '3d3d68317b9176ddbdc565d4cf1fb5291f3687ad538b4fb1d24a2c353dd1d30d', '1512367041', '0', '1', null, '1');
-INSERT INTO `jxnu_user` VALUES ('47', 'Old Fe', '', 'icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaTts3T1nLRtRuibUIOnicM1bw', null, 'https://wx.qlogo.cn/mmopen/vi_32/icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaTts3T1nLRtRuibUIOnicM1bw/0', null, null, null, null, null, null, 'dc3722b34e0144c9ad3bf25dec71ee9ffe47a98d6cf3641ffa7254c2858b429c', '1491836767', '0', '1', null, null);
-INSERT INTO `jxnu_user` VALUES ('48', 'rdgztest_ZEZUBE', '', '', null, '', null, null, null, null, null, null, null, '1507686177', '0', '1', null, null);
-INSERT INTO `jxnu_user` VALUES ('49', 'Old Fe', '', 'icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaicJ9Z6DIWaxZrYQxaKBkX9A', null, 'https://wx.qlogo.cn/mmopen/vi_32/icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaicJ9Z6DIWaxZrYQxaKBkX9A/0', null, null, null, null, null, null, 'a0bc039560cbb8cae3d340d927a6feb60c157b32cfbf4f781fbbfb70e23a98ba', '1512367041', '0', '1', null, null);
-INSERT INTO `jxnu_user` VALUES ('141', '稻壳er', '', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', null, 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTL0fvcRKgRGia4SykgTLECkkDFDITiawFWYibVcRTrsM2FxA4m3Tn8Xx8SI17B85qU4U8DbXtkVVRqoQ/132', null, null, null, null, null, null, '0267ef3bb4630ee0f01f55557f9529e52d1a24ee6d27add87d0d650981d1fbb0', '1555483898', '0', '1', null, null);
+INSERT INTO `jxnu_user` VALUES ('1', '沈大哥', null, '30', '1039115768', '7bODgmOpMu_ErWSrxeOumHmTYoI02IBMptNSv95WjQ3Mma5cXapxzTgwUNlS2rfgIAgjUjzSqkBsk_oC8gRTJENEPjK2AWGimuDelPrgsIZ6EhHGo3FvdCa8yTZAmiF2', 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', '100000', '', null, null, null, null, null, '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('2', '潘绥铭', null, '30', '1', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', '2222', null, null, null, null, null, null, '0', '1', null, null, null, null, '308', '1');
+INSERT INTO `jxnu_user` VALUES ('3', '稻壳', null, '30', '2', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, null, null, null, '294', '1');
+INSERT INTO `jxnu_user` VALUES ('4', '大虾', null, '30', '3', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('5', '邵燕君', null, '30', '4', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('6', '米兰', null, '30', '5', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '1', null, null, null, null, null, null, null, '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('7', '勺子', null, '30', '6', null, 'http://localwechatstatic.wvwvw.cn/1.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('8', '国服第一李白', null, '30', '7', null, 'http://localwechatstatic.wvwvw.cn/9.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('9', '陈昕', null, '30', '8', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('10', '芈月', null, '30', '9', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('11', 'star', null, '30', '10', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('12', 'hellobick', null, '30', '11', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('13', '王晓明', null, '30', '12', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('14', '稻壳er', null, '30', '13', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('15', '玉米棒', null, '30', '14', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('16', '包亚明', null, '30', '15', null, 'http://localwechatstatic.wvwvw.cn/1.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('17', '明月', null, '30', '16', null, 'http://localwechatstatic.wvwvw.cn/9.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('18', '虾米', null, '30', '17', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('19', 'mthink', null, '30', '18', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('20', '南帆', null, '30', '19', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('21', '布什x', null, '30', '20', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('22', '筷子', null, '30', '21', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('23', '陈映芳', null, '30', '22', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('24', '爆米花', null, '30', '23', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('25', '戴锦华编', null, '30', '24', null, 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('26', '戴锦华', null, '30', '25', null, 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('27', '宋伟杰', null, '30', '26', null, 'http://localwechatstatic.wvwvw.cn/11.jpg', '0', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('28', '金庸', null, '30', '27', null, 'http://localwechatstatic.wvwvw.cn/3.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('29', '花生', null, '30', '28', null, 'http://localwechatstatic.wvwvw.cn/7.jpg', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('30', '神哥哥', null, '30', '29', null, 'http://localwechatstatic.wvwvw.cn/5.JPG', '1', null, null, null, null, null, null, '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('38', '运维', null, '30', '8812', '43gdEpHatNMhjPdkXYwb906wD9XMBclmoJkKdYcXwch3z_jalUOwtPAxVCT7T_eVyXFiRL4f7nz2oaxTbejG2_2PzfYmTFbRhdh1HVLfrB_4Yjb7nJeTJCb97mv4_X6b', 'http://localwechatstatic.wvwvw.cn/4.jpg', '1', null, '男', null, null, null, '', '1491836767', '221', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('40', '管理员', null, '30', '123', '43gdEpHatNMhjPdkXYwb906wD9XMBclmoJkKdYcXwch3z_jalUOwtPAxVCT7T_eVyXFiRL4f7nz2oaxTbejG2_2PzfYmTFbRhdh1HVLfrB_4Yjb7nJeTJCb97mv4_X6b', 'http://localwechatstatic.wvwvw.cn/6.jpg', '1', null, '男', null, null, null, 'gaj69bftptvq0018pjdsqk18m0', '1555990212', '145', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('42', '11测试', null, '30', '123123', '7bODgmOpMu_ErWSrxeOumHmTYoI02IBMptNSv95WjQ3Mma5cXapxzTgwUNlS2rfgIAgjUjzSqkBsk_oC8gRTJENEPjK2AWGimuDelPrgsIZ6EhHGo3FvdCa8yTZAmiF2', 'http://localwechatstatic.wvwvw.cn/11.jpg', '1', null, '男', null, null, null, 'k5j6o3i3tv65dg9pmt9mkhcit3', '1512367041', '140', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('43', '辽竹', null, '30', 'Q0j4TwGTfTL0fvcRKgRGia4SykgTLECkkDFDITiawFWYibVcRTrsM2FxA4m3Tn8Xx8SJSVc04eO2BuHMmK6qDviaOQ', null, 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTL0fvcRKgRGia4SykgTLECkkDFDITiawFWYibVcRTrsM2FxA4m3Tn8Xx8SJSVc04eO2BuHMmK6qDviaOQ/0', null, '1', null, null, null, null, '8ffcdcc0e37c27997f72a3803961a7a66d45c455a6e6fdac93b8520f9bb17b2b', '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('44', '胡悦', null, '30', 'CpK8F54ibkpLNMjMwxOHia0O7iabGJzF84SYjiaicE88F4Jm6zID7csnRTO7eG0hgYPfG08vZGyzianbLLgNXeVosyDg', null, 'https://wx.qlogo.cn/mmopen/vi_32/CpK8F54ibkpLNMjMwxOHia0O7iabGJzF84SYjiaicE88F4Jm6zID7csnRTO7eG0hgYPfG08vZGyzianbLLgNXeVosyDg/0', null, null, null, null, null, null, '3d1c286215c640f9f295bbb7ac9d2147b1c655298b7833eb9007d4b627c2757f', '1507686177', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('46', '凡尘', null, '30', 'en2ibMiaEiaWmssbxxeoaRvQiaOFV5H06xsWGO9Lpp5vPtibrKiaV5jfR5KicaUMooeaofO2aVeAsXGvFOoRPMpe7CrJg', null, 'https://wx.qlogo.cn/mmopen/vi_32/en2ibMiaEiaWmssbxxeoaRvQiaOFV5H06xsWGO9Lpp5vPtibrKiaV5jfR5KicaUMooeaofO2aVeAsXGvFOoRPMpe7CrJg/0', null, null, null, null, null, null, '3d3d68317b9176ddbdc565d4cf1fb5291f3687ad538b4fb1d24a2c353dd1d30d', '1512367041', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('47', 'Old Fe', null, '30', 'icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaTts3T1nLRtRuibUIOnicM1bw', null, 'https://wx.qlogo.cn/mmopen/vi_32/icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaTts3T1nLRtRuibUIOnicM1bw/0', null, null, null, null, null, null, 'dc3722b34e0144c9ad3bf25dec71ee9ffe47a98d6cf3641ffa7254c2858b429c', '1491836767', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('48', 'rdgztest_ZEZUBE', null, '30', '', null, '', null, null, null, null, null, null, null, '1507686177', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('49', 'Old Fe', null, '30', 'icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaicJ9Z6DIWaxZrYQxaKBkX9A', null, 'https://wx.qlogo.cn/mmopen/vi_32/icuQGshGeeVLTmricXrLY3Hic5gAkQyLpofFXfkH5MybRpbBB9j7LNxNcHm55cQXicLiaicJ9Z6DIWaxZrYQxaKBkX9A/0', null, null, null, null, null, null, 'a0bc039560cbb8cae3d340d927a6feb60c157b32cfbf4f781fbbfb70e23a98ba', '1512367041', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('141', '稻壳er', '温隆强', '31', 'oh43t0LhBTCC1hebQwXn0YNyXqNM', 'http://localwechatstatic.wvwvw.cn/tmp_aa1ec4d9ec560ffb41b59ffc23f74bf411b249d3455e5d54.jpg', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTL0fvcRKgRGia4SykgTLECkkDFDITiawFWYibVcRTrsM2FxA4m3Tn8Xx8SI17B85qU4U8DbXtkVVRqoQ/132', '1', null, '男', '201526203070', null, null, 'db12eb6a2e2493dbe4c859352b784a844825bae15d26d06d40f34648b4881904', '1557030691', '0', '1', '1557030695', '篮球', 'belive i can mack it', '一枚稻', '131', '1');
+INSERT INTO `jxnu_user` VALUES ('142', '黄婕妤', null, '30', 'oh43t0MAKGzZXqNoH1j8ft8WOxJo', 'http://localwechatstatic.wvwvw.cn/tmp_873e3db966b5675c714be3112e05b95541998e96fa2b5824.jpg', 'https://wx.qlogo.cn/mmhead/2ia6ckkQGIp9hs978ic55ibJxiaxNofPFEUsnWoiaAMlJMMo/132', '0', null, null, '2015232026', null, null, 'b1369f773fa921abda8ce7abcadc7f87323166b142afc9e0acbedb19c1e53560', '1555995268', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('143', 'Z', null, '30', 'oh43t0IMTrVoLqLkMxGev5GUo1KA', null, 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJXqD38aickMuYHfDTNMRVqdFkiaLaX2jz4qlajIq9QkIGkDKp7SeSDPIryOTUarJFALI4nCp7vWesg/132', null, null, null, '2015232029', null, null, '9bca36f4efee4801a9db49800d4f5f0cfb0d270a0969029b2a676cfc4b2ae1d2', '1556173136', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('144', null, null, '', '获取session_key失败！', null, null, null, null, null, null, null, null, 'a57a50ee343fb8532470c1050bf3b691a6a647b4af640a59b8244ec8a7d6fd2e', '1556304141', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('145', '撒西', null, '30', 'oh43t0HMFD38_wdko4y--ZYAxo14', 'http://localwechatstatic.wvwvw.cn/tmp_25f89de9f577709f57f7cc11863ba8597594d361cc754ff3.jpg', 'https://wx.qlogo.cn/mmopen/vi_32/6RdhCBjsqs89KlCEtuQrn4UBU6Zc4XVWIIsWTWbxUZ2HW2GwjZZvv3vgZvlJJzqFUZlicOu8fIbARycVnlicWg6Q/132', '1', null, null, '201526203060', null, null, 'ce825a3331dab72dbdf57f08f008f69a0dc23cc0b4c1f1de5d151bf3662b2b0a', '1557030535', '0', '1', null, null, null, null, '280', '1');
+INSERT INTO `jxnu_user` VALUES ('146', '郭冠中', null, '30', 'oh43t0Lc_SxdqBoloGYtB2hFRDe8', null, 'https://wx.qlogo.cn/mmhead/QU2aHlSAwA2JgTiaBUs2ZpbPxgBu625UONUHrAJVxWnI/132', null, null, null, null, null, null, 'a68d0673d4ae1d15be8db8dc9f0d1a632f4b1567da845eb34a77bf12b61e54d2', '1556443489', '0', '1', '1556443466', null, null, null, '280', null);
+INSERT INTO `jxnu_user` VALUES ('147', '杨婉鸿', null, '30', 'oh43t0Jq8M3xm2Ff0zQP4RvIb7Yk', null, 'https://wx.qlogo.cn/mmhead/GE7jibiaxo3ibliau4NHfVhXrLRicn38Zg3ud1lyWsGMeJbQ/132', null, null, null, null, null, null, 'b3d2b2e77e2fca036a5e76963d65ccbe185cc2e6f53a04abd28bcde883e33436', '1556449849', '0', '1', '1556449837', null, null, null, '280', null);
+INSERT INTO `jxnu_user` VALUES ('148', '黄宥圣', null, '30', 'oh43t0HWsATaoH2A3iIQSYeaQTHc', null, 'https://wx.qlogo.cn/mmhead/RbQcwFGKkqibXEQhN7ibIoX8fR5Qg2Z3F5YjfoNiatWWD0/132', null, null, null, null, null, null, '53ea99ce6f762b5370b1034c6d15a754470cac9ca61b25c401ab60dea3e24058', '1556450661', '0', '1', '1556450649', null, null, null, '280', null);
+INSERT INTO `jxnu_user` VALUES ('149', '於杰天', null, '30', 'oh43t0OP28bAV7nDHl0J14GqaRvs', null, 'https://wx.qlogo.cn/mmhead/mwSzrTlRQQ44SUGpr8ztWZwQjBMZibN0sREsU2Pvj7bQ/132', null, null, null, null, null, null, '5da6728ea473684e83a6df51a97fdc6614878ed736255ac7c14b9030322bb4df', '1556505817', '0', '1', null, null, null, null, '280', null);
+INSERT INTO `jxnu_user` VALUES ('150', '李孟龙', null, '30', 'oh43t0CFyXO2ufC72Wdqqxt7sjgc', null, 'https://wx.qlogo.cn/mmhead/LicT1Os7MCXCpAxPia5KmlYEWNJmRbdfYHe4FWmyfQYQc/132', null, null, null, null, null, null, '99c90a3fcb78d1f4e84dda1b809e72d3de72ce533e233ba1ef8c04ef9eac0e1c', '1556604404', '0', '1', null, null, null, null, '280', null);
+INSERT INTO `jxnu_user` VALUES ('151', '陈进平', null, '30', 'oh43t0MeUzl2KzAkcS815TpAdBmA', null, 'https://wx.qlogo.cn/mmhead/6tBwjdhcqic6OEcOSWVZCAu55icSyqJnCQGBnwMpGISFc/132', null, null, null, null, null, null, '7a7e464e48898a977a8024281e019f79937b907f563475504c051ae7049ddc14', '1556912297', '0', '1', null, null, null, null, '280', null);
